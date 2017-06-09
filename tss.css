@@ -1,0 +1,65 @@
+/* =============================================================
+    CSS2 specification for Sente in oXygen.
+============================================================= */
+* {
+    display:inline;
+}
+senteContainer{
+    display:block;
+    max-width:800px;
+    min-width:200px;
+    font-family:Helvetica;
+    font-size:14px;
+    margin-top:0.5em;
+    margin-right:0.5em;
+    margin-left:0.5em;
+    margin-bottom:0.5em;
+    line-height:1.2em;
+}
+reference, author, editor, characteristics, keywords, attachments {
+    display:block;
+}
+reference {
+    border-bottom: 1px solid;
+}
+date[type=Publication] {
+    display:block;
+}
+date[year] {
+    content: attr(year)"-"attr(month)"-"attr(day);
+}
+characteristic[name="publicationTitle"] {
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    }
+
+characteristic[name="abstractText"] {
+    display:block;
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+}
+
+/**********
+omit from display
+**********/
+dates, characteristics {
+    display:inline;
+    padding:0px;
+    margin:0px;
+}
+/**********
+breaks
+**********/
+pb, br {
+    display:inline;
+    content:"\a";
+    }
+pb:after {
+	content: "[pb @n=" attr(n) "]";
+	direction:ltr;
+	vertical-align:top;
+	font-size: 0.8em;
+	color: orange;
+	display:inline;
+}
