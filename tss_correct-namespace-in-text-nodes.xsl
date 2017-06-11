@@ -16,10 +16,10 @@
         </xsl:copy>
     </xsl:template>
     
-    <xsl:template match="tss:senteContainer">
+    <xsl:template match="/">
         <xsl:result-document href="{substring-before(base-uri(.),'.')}-correctNs.TSS.xml">
             <xsl:copy>
-                <xsl:apply-templates select="@* | node()"/>
+                <xsl:apply-templates/>
             </xsl:copy>
         </xsl:result-document>
     </xsl:template>
