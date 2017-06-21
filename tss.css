@@ -57,10 +57,7 @@ characteristic[name = "publicationTitle"]{
 characteristic[name = 'articleTitle']{
     font-style:italic;
 }
-keywords{
-    display:none;
-}
-attachments{
+keywords, attachments, initials {
     display:none;
 }
 note{
