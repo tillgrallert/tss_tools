@@ -18,12 +18,13 @@
     </xsl:template>
     
     <xsl:template match="/">
-        <xsl:result-document href="{substring-before(base-uri(.),'.')}-unescaped.TSS.xml">
+        <!-- output file name and path is set through oXygen project transformation -->
+<!--        <xsl:result-document href="{substring-before(base-uri(.),'.')}-unescaped.TSS.xml">-->
             <xsl:value-of select="'&lt;?xml-stylesheet type=&quot;text/css&quot; href=&quot;../../tss_tools/tss.css&quot;?>'" disable-output-escaping="yes"/>
             <xsl:copy>
                 <xsl:apply-templates/>
             </xsl:copy>
-        </xsl:result-document>
+        <!--</xsl:result-document>-->
     </xsl:template>
     
     <!-- unescape all text() nodes -->

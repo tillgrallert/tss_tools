@@ -17,11 +17,12 @@
     </xsl:template>
     
     <xsl:template match="/">
-        <xsl:result-document href="{substring-before(base-uri(.),'.')}-correctNs.TSS.xml">
+        <!-- output file name and path is set through oXygen project transformation -->
+<!--        <xsl:result-document href="{substring-before(base-uri(.),'.')}-correctNs.TSS.xml">-->
             <xsl:copy>
                 <xsl:apply-templates/>
             </xsl:copy>
-        </xsl:result-document>
+        <!--</xsl:result-document>-->
     </xsl:template>
     
     <!-- html -->
