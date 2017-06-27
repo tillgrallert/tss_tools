@@ -29,6 +29,15 @@
     <xsl:template match="tss:br">
         <html:br/>
     </xsl:template>
+    <xsl:template match="tss:i">
+        <html:i/>
+    </xsl:template>
+    <xsl:template match="tss:u">
+        <html:u/>
+    </xsl:template>
+    <xsl:template match="tss:b">
+        <html:b/>
+    </xsl:template>
     <!-- tei -->
     <xsl:template match="tss:characteristic/tss:date">
         <xsl:element name="tei:date">
@@ -50,8 +59,18 @@
             <xsl:apply-templates select="@* | node()"/>
         </xsl:element>
     </xsl:template>
+    <xsl:template match="tss:cb">
+        <xsl:element name="tei:cb">
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="tss:lb">
+        <xsl:element name="tei:lb">
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:element>
+    </xsl:template>
     <!-- tei names -->
-    <xsl:template match="tss:persName">
+    <xsl:template match="tss:persName | tss:name">
         <xsl:element name="tei:persName">
             <xsl:apply-templates select="@* | node()"/>
         </xsl:element>
@@ -68,6 +87,11 @@
     </xsl:template>
     <xsl:template match="tss:addName">
         <xsl:element name="tei:addName">
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="tss:roleName">
+        <xsl:element name="tei:roleName">
             <xsl:apply-templates select="@* | node()"/>
         </xsl:element>
     </xsl:template>
@@ -100,6 +124,11 @@
     <!-- tei other stuff -->
     <xsl:template match="tss:ref">
         <xsl:element name="tei:ref">
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="tss:note">
+        <xsl:element name="tei:note">
             <xsl:apply-templates select="@* | node()"/>
         </xsl:element>
     </xsl:template>
