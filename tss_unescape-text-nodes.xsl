@@ -137,22 +137,15 @@
         <xsl:for-each select="tokenize($p_input,'&lt;')">
             <xsl:variable name="v_string-self" select="."/>
             <xsl:variable name="v_tag-full" select="substring-before(.,'&gt;')"/>
-            <!-- the tokenize function needs to take self-closing tags into account  -->
-            <xsl:variable name="v_tag-parts" select="tokenize($v_tag-full,'[  &#xA;]')"/>
-            <!--<xsl:variable name="v_tag-closing">
-                <xsl:choose>
-                    <xsl:when test="starts-with($v_tag-parts[1],'/')">
-                        <xsl:value-of select="true()"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of select="false()"/>
-                    </xsl:otherwise>
-                </xsl:choose>
-            </xsl:variable>-->
+            <xsl:variable name="v_tag-parts" select="tokenize($v_tag-full,'[\s|\n]')"/>
             <xsl:variable name="v_tag-name">
                 <xsl:choose>
                     <xsl:when test="starts-with($v_tag-parts[1],'/')">
                         <xsl:value-of select="substring-after($v_tag-parts[1],'/')"/>
+                    </xsl:when>
+                    <!-- take self-closing tags into account  -->
+                    <xsl:when test="ends-with($v_tag-parts[1],'/')">
+                        <xsl:value-of select="substring-before($v_tag-parts[1],'/')"/>
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:value-of select="$v_tag-parts[1]"/>
