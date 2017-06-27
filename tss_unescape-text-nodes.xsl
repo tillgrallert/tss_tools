@@ -30,12 +30,12 @@
     
     <!-- unescape all text() nodes -->
     <!-- PROBLEM: ampersand (&amp;) and individual &lt; should always be escaped because otherwise they will invalidate  the XML output -->
-    <xsl:template match="tss:characteristic[@name='abstractText']/text()">
+    <xsl:template match="tss:characteristic[@name='abstractText']/text() | tss:comment/text() | tss:quotation/text()">
         <xsl:variable name="v_preprocessed">
             <xsl:apply-templates select="." mode="m_preprocessing"/>
         </xsl:variable>
 <!--        <xsl:value-of select="$v_preprocessed"/>-->
-        <xsl:call-template name="t_unescape-me">
+        <xsl:call-template name="t_unescape">
             <xsl:with-param name="p_input" select="$v_preprocessed"/>
         </xsl:call-template>
     </xsl:template>
@@ -94,6 +94,9 @@
     <xsl:variable name="v_allowed-tags">
         <!-- HTML -->
         <br/>
+        <i/>
+        <u/>
+        <b/>
         <!-- TEI -->
         <!-- structural information -->
         <pb/>
@@ -102,10 +105,16 @@
         <!-- editorial changes -->
         <add/>
         <del/>
+        <note/>
+        <ref/>
         <!-- named entities -->
+        <name/>
         <persName/>
         <forename/>
         <surname/>
+        <addName/>
+        <roleName/>
+        <geogName/>
         <orgName/>
         <placeName/>
         <!-- measures, dates -->
@@ -114,23 +123,7 @@
         <date/>
     </xsl:variable>
     
-    <xsl:template match="@*|*|processing-instruction()|comment()" mode="m_unescape">
-        <xsl:copy>
-            <xsl:apply-templates select="*|@*|text()|processing-instruction()|comment()" mode="m_unescape"/>
-        </xsl:copy>
-    </xsl:template>
-    
-    <xsl:template match="tss:characteristic[@name='abstractText']" mode="m_unescape">
-        <xsl:copy>
-            <xsl:call-template name="t_unescape-me">
-                <xsl:with-param name="p_input">
-                    <xsl:value-of select="."/>
-                </xsl:with-param>
-            </xsl:call-template>
-        </xsl:copy>
-    </xsl:template>
-    
-    <xsl:template name="t_unescape-me">
+    <xsl:template name="t_unescape">
         <xsl:param name="p_input"/>
         <xsl:variable name="v_string_start"/>
         <!-- plan: tokenize at < -->
