@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tss:senteContainer xmlns="http://www.thirdstreetsoftware.com/SenteXML-1.0"
+                    xmlns:tss="http://www.thirdstreetsoftware.com/SenteXML-1.0"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:html="http://www.w3.org/1999/xhtml"
+                    xmlns:tei="http://www.tei-c.org/ns/1.0"
+                    version="1.0"
+                    xsi:schemaLocation="http://www.thirdstreetsoftware.com/SenteXML-1.0 SenteXML.xsd">
+	  <tss:library>
+		    <tss:references>
+			      <tss:reference>
+				        <tss:publicationType name="Photograph"/>
+				        <tss:authors>
+					          <tss:author role="Photographer">
+						            <tss:surname>Bonfils</tss:surname>
+						            <tss:forenames/>
+						            <tss:initials/>
+					          </tss:author>
+				        </tss:authors>
+				        <tss:dates>
+					          <tss:date day="22" month="10" type="Entry" year="2015"/>
+					          <tss:date day="22" month="10" type="Modification" year="2015"/>
+				        </tss:dates>
+				        <tss:characteristics>
+					          <tss:characteristic name="articleTitle">Image 13: Buste de jeune fille égyptienne [c 1867-c 1914]. EGYPT, Types &amp; Scenes.</tss:characteristic>
+					          <tss:characteristic name="publicationTitle">Album 111 [c 1867-c 1914]</tss:characteristic>
+					          <tss:characteristic name="abstractText">Image 13: Buste de jeune fille égyptienne [c 1867-c 1914]. EGYPT, Types &amp; Scenes.</tss:characteristic>
+					          <tss:characteristic name="publicationCountry">Beyrouth</tss:characteristic>
+					          <tss:characteristic name="publisher">Maison Bonfils</tss:characteristic>
+					          <tss:characteristic name="rating">4</tss:characteristic>
+					          <tss:characteristic name="UUID">B987EB7D-D2F2-40CB-9153-9B95F58E4DCA</tss:characteristic>
+					          <tss:characteristic name="Caption">Buste de jeune fille égyptienne</tss:characteristic>
+					          <tss:characteristic name="call-num">EAP644/1/8 TFDC_111_032_0578</tss:characteristic>
+					          <tss:characteristic name="Item">578</tss:characteristic>
+					          <tss:characteristic name="Signatur">EAP644/1/8 TFDC_111_032_0578</tss:characteristic>
+					          <tss:characteristic name="Collection description">The Fouad Debbas Collection</tss:characteristic>
+					          <tss:characteristic name="Repository">EAP</tss:characteristic>
+					          <tss:characteristic name="Citation identifier">TFDC_111_032_0578</tss:characteristic>
+					          <tss:characteristic name="Album">111</tss:characteristic>
+					          <tss:characteristic name="URL">http://eap.bl.uk/EAPDigitalItems/EAP644/EAP644_1_8-TFDC_111_032_0578_02_L.jpg</tss:characteristic>
+					          <tss:characteristic name="publicationStatus">Unknown</tss:characteristic>
+				        </tss:characteristics>
+				        <tss:keywords>
+					          <tss:keyword assigner="Sente User Sebastian">People</tss:keyword>
+					          <tss:keyword assigner="Sente User Sebastian">Photograph</tss:keyword>
+					          <tss:keyword assigner="Sente User Sebastian">Portrait</tss:keyword>
+					          <tss:keyword assigner="Sente User Sebastian">Source</tss:keyword>
+				        </tss:keywords>
+				        <tss:attachments>
+					          <tss:attachmentReference>
+						            <name>Scan 2</name>
+						            <URL>file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/Bonfils/Album%20111%20%5Bc%201867-c%201914%5D%20Image%2013%20Buste%20de%20jeune%20fille%20e%CC%81gyptienne%20%5Bc%201867-c%201914%5D.%20EGYPT%2C%20Types%20&amp;%20%232.jpg</URL>
+					          </tss:attachmentReference>
+					          <tss:attachmentReference>
+						            <name>URL Scan 2</name>
+						            <URL>http://eap.bl.uk/EAPDigitalItems/EAP644/EAP644_1_8-TFDC_111_032_0578_02_L.jpg</URL>
+					          </tss:attachmentReference>
+				        </tss:attachments>
+			      </tss:reference>
+			     
+      </tss:references>
+	  </tss:library>
+</tss:senteContainer>

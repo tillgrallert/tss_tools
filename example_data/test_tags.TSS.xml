@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<tss:senteContainer version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.thirdstreetsoftware.com/SenteXML-1.0 SenteXML.xsd" xmlns:tss="http://www.thirdstreetsoftware.com/SenteXML-1.0" xmlns="http://www.thirdstreetsoftware.com/SenteXML-1.0" >
+<tss:library>
+<tss:references>
+<tss:reference>
+<tss:publicationType name="Archival Letter"/>
+<tss:authors>
+<tss:author role="Author"><tss:surname>Devey</tss:surname><tss:forenames>George Pollard</tss:forenames><tss:initials></tss:initials></tss:author>
+</tss:authors>
+<tss:dates>
+<tss:date type="Publication" day="28" month="1" year="1913"/>
+<tss:date type="Entry" day="11" month="5" year="2013"/>
+<tss:date type="Modification" day="8" month="2" year="2014"/>
+</tss:dates>
+<tss:characteristics>
+<tss:characteristic name="articleTitle">General Report for the December Quarter 1912</tss:characteristic>
+<tss:characteristic name="publicationTitle">PRO FO 618/3 Damascus Draft 1, &lt;i&gt;Quarterly Report&lt;/i&gt;, Devey to Lowther 28 Jan. 1913</tss:characteristic>
+<tss:characteristic name="abstractText">&quot;&amp;lt;del&amp;gt;How far&amp;lt;/del&amp;gt; In what manner&amp;lt;/add&amp;gt; Damascus + the Vilayet of Syria have been affected by the outbreak of war in the Balkans + its results has found the subject of despatches n.os 63 &amp;amp; 67 already sent. And since peace negotiations have begun, there is not much to be added at this moment.&lt;br&gt;The long expected arrival of Marshal Kyazim Pasha took place on the 1st day of Bairam Nov. 10 and he at once attend to the business of the Vilayet despite the public holiday. New Mutessarifs arrived in the districts of Hauran in October and at Hama quite recently; the former, Kyazim Pasha, was here some seven years ago, in the same post and is &amp;lt;del&amp;gt;believed to be utterly corrupt&amp;lt;/del&amp;gt; already in some quarters to be corrupt&amp;lt;/add&amp;gt;; while his secretary (Tahriret Kiatibi) is a most fanatical + intolerant person. &amp;lt;persName&amp;gt;Kiamil Bey&amp;lt;/persName&amp;gt; was promoted from one of the Cazas of Aidin vilayet, +the change at Hama will be beneficial as &amp;lt;persName&amp;gt;Raouf Bey el Ayubi&amp;lt;/persName&amp;gt; had shewn himself incompetent, and useless.&lt;br&gt;&amp;lt;del&amp;gt;Among other things + appointments of officials are the following&amp;lt;/del&amp;gt;&amp;lt;pb/&amp;gt;&quot;&lt;br&gt;&lt;br&gt;MISSING PAGES?</tss:characteristic>
+<tss:characteristic name="issue">Draft 1</tss:characteristic>
+<tss:characteristic name="publicationCountry">Damascus</tss:characteristic>
+<tss:characteristic name="status">Complete</tss:characteristic>
+<tss:characteristic name="UUID">1CEE662E-9BDB-4B16-AE6E-92860B414823</tss:characteristic>
+<tss:characteristic name="Signatur">FO 618/3</tss:characteristic>
+<tss:characteristic name="Short Titel">Quarterly Report</tss:characteristic>
+<tss:characteristic name="Recipient">Lowther</tss:characteristic>
+<tss:characteristic name="Date read">2013-05-10</tss:characteristic>
+<tss:characteristic name="Repository">PRO</tss:characteristic>
+<tss:characteristic name="Citation identifier">Devey 1913e</tss:characteristic>
+<tss:characteristic name="publicationStatus">Unknown</tss:characteristic>
+</tss:characteristics>
+<tss:keywords>
+<tss:keyword assigner="Sente User Sebastian">'Id al-adha</tss:keyword>
+<tss:keyword assigner="Sente User Sebastian">administrative change</tss:keyword>
+<tss:keyword assigner="Sente User Sebastian">Balkan</tss:keyword>
+<tss:keyword assigner="Sente User Sebastian">Balkan War, 1912</tss:keyword>
+<tss:keyword assigner="Sente User Sebastian">Damascus</tss:keyword>
+<tss:keyword assigner="Sente User Sebastian">Digital copy</tss:keyword>
+<tss:keyword assigner="Sente User Sebastian">Hawran</tss:keyword>
+<tss:keyword assigner="Sente User Sebastian">War</tss:keyword>
+<tss:keyword assigner="Sente User till">British source</tss:keyword>
+<tss:keyword assigner="Sente User till">official records</tss:keyword>
+<tss:keyword assigner="Sente User till">Source</tss:keyword>
+</tss:keywords>
+</tss:reference>
+</tss:references>
+</tss:library>
+</tss:senteContainer>
