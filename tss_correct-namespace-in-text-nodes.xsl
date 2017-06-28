@@ -27,19 +27,27 @@
     
     <!-- html -->
     <xsl:template match="tss:br">
-        <html:br/>
+        <html:br>
+            <xsl:apply-templates select="@* | node()"/>
+        </html:br>
     </xsl:template>
     <xsl:template match="tss:i">
-        <html:i/>
+        <html:i>
+            <xsl:apply-templates select="@* | node()"/>
+        </html:i>
     </xsl:template>
     <xsl:template match="tss:u">
-        <html:u/>
+        <html:u>
+            <xsl:apply-templates select="@* | node()"/>
+        </html:u>
     </xsl:template>
     <xsl:template match="tss:b">
-        <html:b/>
+        <html:b>
+            <xsl:apply-templates select="@* | node()"/>
+        </html:b>
     </xsl:template>
     <!-- tei -->
-    <xsl:template match="tss:characteristic/tss:date">
+    <xsl:template match="tss:date[not(parent::tss:dates)]">
         <xsl:element name="tei:date">
             <xsl:apply-templates select="@* | node()"/>
         </xsl:element>
@@ -70,7 +78,7 @@
         </xsl:element>
     </xsl:template>
     <!-- tei names -->
-    <xsl:template match="tss:persName | tss:name">
+    <xsl:template match="tss:persName | tss:name[not(ancestor::tss:attachmentReference)]">
         <xsl:element name="tei:persName">
             <xsl:apply-templates select="@* | node()"/>
         </xsl:element>
