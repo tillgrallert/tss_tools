@@ -140,6 +140,11 @@
             <xsl:apply-templates select="@* | node()"/>
         </xsl:element>
     </xsl:template>
+    <xsl:template match="tss:title[not(parent::tss:note)]">
+        <xsl:element name="tei:title">
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:element>
+    </xsl:template>
     
     
 </xsl:stylesheet>
