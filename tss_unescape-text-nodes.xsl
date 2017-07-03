@@ -121,6 +121,8 @@
         <measureGrp/>
         <measure/>
         <date/>
+        <!-- bibliographic information -->
+        <title/>
     </xsl:variable>
     
     <xsl:template name="t_unescape">
