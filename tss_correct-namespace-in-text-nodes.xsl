@@ -57,7 +57,7 @@
             <xsl:apply-templates select="@* | node()"/>
         </xsl:element>
     </xsl:template>
-    <xsl:template match="tss:measure">
+    <xsl:template match="tss:measure | tss:price">
         <xsl:element name="tei:measure">
             <xsl:apply-templates select="@* | node()"/>
         </xsl:element>
