@@ -30,7 +30,7 @@
     
     <!-- unescape all text() nodes -->
     <!-- PROBLEM: ampersand (&amp;) and individual &lt; should always be escaped because otherwise they will invalidate  the XML output -->
-    <xsl:template match="tss:characteristic[@name='abstractText']/text() | tss:comment/text() | tss:quotation/text()">
+    <xsl:template match="tss:characteristic[@name='abstractText']//text() | tss:comment/text() | tss:quotation/text()">
         <xsl:variable name="v_preprocessed">
             <xsl:apply-templates select="." mode="m_preprocessing"/>
         </xsl:variable>
@@ -123,6 +123,8 @@
         <date/>
         <!-- bibliographic information -->
         <title/>
+        <!-- custom, faulty mark-up -->
+        <price/>
     </xsl:variable>
     
     <xsl:template name="t_unescape">
