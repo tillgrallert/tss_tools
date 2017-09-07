@@ -1730,6 +1730,10 @@
                                 <!-- check if the "Archival Periodical" references a newspaper. this can either be done by reference to a specific title or through keywords -->
                                 <xsl:choose>
                                     <xsl:when test="$vRef/tss:keywords/tss:keyword='daily' or $vRef/tss:keywords/tss:keyword='biweekly' or $vRef/tss:keywords/tss:keyword='weekly'">
+                                        <!-- debugging -->
+                                        <xsl:message>
+                                            <xsl:text>newspaper issues classified as "Archival Periodical"</xsl:text>
+                                        </xsl:message>
                                         <!-- the reference is a newspaper. use the newspaper content. -->
                                         <xsl:choose>
                                     <!-- if the short title of the periodical is the same as the one before, it will be omitted -->
