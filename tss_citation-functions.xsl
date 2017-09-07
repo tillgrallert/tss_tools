@@ -1677,6 +1677,7 @@
                     <xsl:variable name="vCitationFinal">
                         <xsl:choose>
                         <!-- Periodicals -->
+                        <!-- NOTE: many sources have been improperly filed into the categories "Newspaper article", "Archival Periodical" or "Archival Periodical Article". Many references in the "Newspaper article" category actually pertain to whole issues. In addition there should be a notable difference between newspapers and other periodicals -->
                         <!-- v1d: in order to shorten footnotes, one could look up whether the preceeding reference was to the same publication -->
                         <xsl:when test="$vRef/tss:publicationType[@name='Newspaper article']">
                             <xsl:if test="$pMode='fn' or 'fn2'">
@@ -1719,7 +1720,6 @@
                                         </xsl:if>
                                     </xsl:otherwise>
                                 </xsl:choose>
-
                                 <!--<xsl:value-of select="$vDatePublWeekday"/>-->
                                 <xsl:value-of select="$vCitedPages"/>
                             </xsl:if>
@@ -1727,6 +1727,41 @@
 
                         <xsl:when test="$vRef/tss:publicationType[@name='Archival Periodical']">
                             <xsl:if test="$pMode='fn' or 'fn2'">
+                                <!-- check if the "Archival Periodical" references a newspaper. this can either be done by reference to a specific title or through keywords -->
+                                <xsl:choose>
+                                    <xsl:when test="$vRef/tss:keywords/tss:keyword='daily' or $vRef/tss:keywords/tss:keyword='biweekly' or $vRef/tss:keywords/tss:keyword='weekly'">
+                                        <!-- the reference is a newspaper. use the newspaper content. -->
+                                        <xsl:choose>
+                                    <!-- if the short title of the periodical is the same as the one before, it will be omitted -->
+                                    <xsl:when
+                                        test="$vRef/tss:characteristics/tss:characteristic[@name='Short Titel'] = preceding-sibling::tss:reference[1]/tss:characteristics/tss:characteristic[@name='Short Titel']">
+                                        <!--<xsl:text> **same** </xsl:text>-->
+                                    </xsl:when>
+                                    <!-- if the reference has a short title it will be used -->
+                                    <xsl:when
+                                        test="$vRef/tss:characteristics/tss:characteristic[@name='Short Titel']">
+                                        <xsl:value-of select="$vTitleShort"/>
+                                    </xsl:when>
+                                    <!-- otherwise, the full title will be returned -->
+                                    <xsl:otherwise>
+                                        <xsl:value-of select="$vTitlePublication"/>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                                <xsl:text> </xsl:text>
+                                <!-- C15: Place of publication in brackets: (Beirut) -->
+                                <xsl:value-of select="$vDatePubl"/>
+                                
+                                        <xsl:if
+                                            test="$vRef/tss:characteristics/tss:characteristic[@name='volume']">
+                                            <xsl:value-of
+                                                select="concat(' (#',$vRef/tss:characteristics/tss:characteristic[@name='volume'],')')"
+                                            />
+                                        </xsl:if>
+                                
+                                <!--<xsl:value-of select="$vDatePublWeekday"/>-->
+                                <xsl:value-of select="$vCitedPages"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
                                 <xsl:choose>
                                     <!-- if the short title of the periodical is the same as the one before, it will be omitted -->
                                     <xsl:when
@@ -1886,6 +1921,8 @@
                                 <xsl:value-of
                                     select="if($vRef/tss:characteristics/tss:characteristic[@name='Repository']!='') then(concat(' (', $vRef/tss:characteristics/tss:characteristic[@name='Repository'],' copy)')) else()"
                                 />
+                            </xsl:otherwise>
+                                </xsl:choose>
                             </xsl:if>
                         </xsl:when>
 
