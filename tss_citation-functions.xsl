@@ -2212,8 +2212,9 @@
                                 <!-- in case the publication is a serial, further information is needed -->
                                 <xsl:choose>
                                     <!-- as I know the newspapers I am using, I can implement custom code -->
+                                    <!-- check for newspapers -->
                                     <xsl:when
-                                        test="$vTitleShort='Thamarāt' or $vTitleShort='Bashīr' or $vTitleShort='Ḥadīqat' or $vTitleShort='Lisān' or $vTitleShort='Suriye' or $vTitleShort='Sūriye' or $vTitleShort='Jarīdat al-Muqtabas'">
+                                        test="$vTitleShort='Thamarāt' or $vTitleShort='Bashīr' or $vTitleShort='Ḥadīqat' or $vTitleShort='Lisān' or $vTitleShort='Suriye' or $vTitleShort='Sūriye' or  lower-case($vTitleShort)='jarīdat al-muqtabas' or $vTitleShort = 'Iqbāl' or $vTitleShort = 'Ittiḥād'">
                                         <xsl:value-of select="concat('in ',$vTitleShort)"/>
                                         <xsl:text> </xsl:text>
                                         <!-- C15: Place of publication in brackets: (Beirut) -->
@@ -2225,6 +2226,7 @@
                                             />
                                         </xsl:if>
                                     </xsl:when>
+                                    <!-- check for other periodicals such as monthly journals: might need to add Maḥabba, Ḥasnāʾ-->
                                     <xsl:when
                                         test="$vTitleShort='Jinān' or $vTitleShort='Muqtaṭaf' or $vTitleShort='Majallat al-Muqtabas'">
                                         <xsl:value-of select="concat('in ',$vTitleShort)"/>
