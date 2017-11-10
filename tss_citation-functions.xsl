@@ -1126,22 +1126,24 @@
                         <!-- the first choose establishes whether a short title must be automatically generated -->
                         <xsl:variable name="vTitleShort1">
                             <xsl:choose>
+                                <!-- account for those journals / newspapers of the same title, e.g. al-Muqtabas from Damascus -->
+                                <xsl:when test="lower-case($vRef/tss:characteristics/tss:characteristic[@name='Short Titel'])='jarīdat al-muqtabas'">
+                                    <xsl:text>Muqtabas (J)</xsl:text>
+                                </xsl:when>
+                                <xsl:when test="lower-case($vRef/tss:characteristics/tss:characteristic[@name='Short Titel'])='majallat al-muqtabas'">
+                                    <xsl:text>Muqtabas (M)</xsl:text>
+                                </xsl:when>
                                 <xsl:when
                                     test="$vRef/tss:characteristics/tss:characteristic[@name='Shortened title']!=''">
                                     <!-- any mark-up inside citations causes trouble in Word -->
-                                    <!--<i>-->
                                     <xsl:value-of
                                         select="$vRef/tss:characteristics/tss:characteristic[@name='Shortened title']"/>
-
-                                    <!--</i>-->
                                 </xsl:when>
                                 <xsl:when
                                     test="$vRef/tss:characteristics/tss:characteristic[@name='Short Titel']!=''">
                                     <!-- any mark-up inside citations causes trouble in Word -->
-                                    <!--<i>-->
                                     <xsl:value-of
                                         select="$vRef/tss:characteristics/tss:characteristic[@name='Short Titel']"/>
-                                    <!--</i>-->
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <!-- in case an automatic short title is to be generated this choose selects publication or article titles -->
@@ -1210,12 +1212,13 @@
                                     <xsl:with-param name="pLang" select="$vLang"/>
                                 </xsl:call-template>
                             </xsl:when>
-                            <xsl:when test="$pCaps='y' and $vLang='ar'">
+                            <!-- this is redundant -->
+                            <!--<xsl:when test="$pCaps='y' and $vLang='ar'">
                                 <xsl:call-template name="funcStringCapsFirst">
                                     <xsl:with-param name="pString" select="$vTitleShort1"/>
                                     <xsl:with-param name="pLang" select="$vLang"/>
                                 </xsl:call-template>
-                            </xsl:when>
+                            </xsl:when>-->
                             <xsl:when test="$pCaps='y'">
                                 <xsl:call-template name="funcStringCapsFirst">
                                     <xsl:with-param name="pString" select="$vTitleShort1"/>
@@ -1226,10 +1229,6 @@
                                 <xsl:value-of select="$vTitleShort1"/>
                             </xsl:otherwise>
                         </xsl:choose>
-                        
-                        <!--<xsl:call-template name="funcStringCaps">
-                            <xsl:with-param name="pString" select="$vTitleShort1"/>
-                        </xsl:call-template>-->
                     </xsl:variable>
                     <xsl:variable name="vC15-Contributors-additional">
                         <xsl:if test="$pMode='fn' or $pMode='fn2'">
@@ -1242,7 +1241,6 @@
                                     <xsl:value-of select="$vSeparatorInfo"/>
                                 </xsl:if>
                                 <xsl:value-of select="$vEditors"/>
-                                <!--<xsl:text> </xsl:text>-->
                             </xsl:if>
                         </xsl:if>
                         <!--<xsl:if test="$pMode='fn2'">
@@ -1731,9 +1729,9 @@
                                 <xsl:choose>
                                     <xsl:when test="$vRef/tss:keywords/tss:keyword='daily' or $vRef/tss:keywords/tss:keyword='biweekly' or $vRef/tss:keywords/tss:keyword='weekly'">
                                         <!-- debugging -->
-                                        <xsl:message>
+                                        <!--<xsl:message>
                                             <xsl:text>newspaper issues classified as "Archival Periodical"</xsl:text>
-                                        </xsl:message>
+                                        </xsl:message>-->
                                         <!-- the reference is a newspaper. use the newspaper content. -->
                                         <xsl:choose>
                                     <!-- if the short title of the periodical is the same as the one before, it will be omitted -->
@@ -2879,11 +2877,7 @@
             <xsl:choose>
                 <xsl:when
                     test="$pRef/tss:characteristics/tss:characteristic[@name='Citation identifier']!=''">
-                    <!-- <xsl:call-template name="funcReplacement">
-                        <xsl:with-param name="pString" select="$pRef/tss:characteristics/tss:characteristic[@name='Citation identifier']"/>
-                        <xsl:with-param name="pFind" select="' '"/>
-                        <xsl:with-param name="pReplace" select="'+'"/>
-                    </xsl:call-template> -->
+                   <!-- in order to deal with whitespace not allowe in attribute values -->
                     <xsl:value-of
                         select="replace($pRef/tss:characteristics/tss:characteristic[@name='Citation identifier'],' ','+')"
                     />
