@@ -103,7 +103,8 @@
         <cb/>
         <lb/>
         <!-- editorial changes -->
-        <add/>
+        <!-- since at some point Sente failed to recognise the opening tag <add> but accepted the closing </add> all <add> tags must be left unescaped in order to avoid potentially erroneous tags -->
+<!--        <add/>-->
         <del/>
         <note/>
         <ref/>
