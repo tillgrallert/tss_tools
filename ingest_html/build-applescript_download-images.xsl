@@ -31,15 +31,14 @@ set vID to {]]><xsl:value-of select="replace($p_id,'\s','')"/><![CDATA[}]]>
         <![CDATA[
 
 set vErrors to {}
-set vFolder1 to "]]><xsl:value-of select="$p_target-folder"/><![CDATA["
+set vFolder to "]]><xsl:value-of select="$p_target-folder"/><![CDATA["
 
 repeat with Y from 1 to (number of items) of vUrlDoc
 	set vUrlDocSelected to item Y of vUrlDoc
 	set vIDSelected to item Y of vID
-	set vFileName to vFolder1 & "/" & vIDSelected & ".jpg"
-	
+	set vFileName to vFolder & "/" & vIDSelected & ".jpg"
+	delay 0.5
 	try
-		
 		do shell script "curl -o '" & vFileName & "' " & vUrlBase & vUrlDocSelected
 	on error
 		set end of vErrors to vUrlDocSelected
