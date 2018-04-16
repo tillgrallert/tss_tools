@@ -102,6 +102,7 @@
     <xsl:template match="html:a" mode="m_id-auction">
         <xsl:analyze-string select="@href" regex="-(\d+)\.html$|id,(\d+),var,">
             <xsl:matching-substring>
+                <!-- the ID should have nine digits-->
                 <xsl:value-of select="concat(regex-group(1),regex-group(2))"/>
             </xsl:matching-substring>
         </xsl:analyze-string>
@@ -118,7 +119,18 @@
                 <xsl:apply-templates select="." mode="m_id-auction"/>
             </xsl:variable>
             <xsl:variable name="vPubTitle">
-                <xsl:value-of select="substring-before(substring-after(./@href,'var,'),',language')"/>
+                <xsl:choose>
+                    <xsl:when test="contains(@href,'var,')">
+                        <xsl:value-of select="substring-before(substring-after(@href,'var,'),',language')"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                       <xsl:analyze-string select="@href" regex="/(.[^/]+)-\d+.html$">
+                           <xsl:matching-substring>
+                               <xsl:value-of select="replace(regex-group(1),'-',' ')"/>
+                           </xsl:matching-substring>
+                       </xsl:analyze-string>
+                    </xsl:otherwise>
+                </xsl:choose>
             </xsl:variable>
             <xsl:variable name="vDate" select="current-date()"/>
 
