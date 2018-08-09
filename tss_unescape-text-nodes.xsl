@@ -130,7 +130,6 @@
     
     <xsl:template name="t_unescape">
         <xsl:param name="p_input"/>
-        <xsl:variable name="v_string_start"/>
         <!-- plan: tokenize at < -->
         <xsl:for-each select="tokenize($p_input,'&lt;')">
             <xsl:variable name="v_string-self" select="."/>
@@ -173,7 +172,6 @@
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:for-each>
-        
     </xsl:template>
     
 </xsl:stylesheet>
