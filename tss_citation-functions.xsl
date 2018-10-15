@@ -374,7 +374,13 @@
                                     <xsl:value-of
                                         select="concat(format-number(number($vDPubD),'0'),' ')"/>
                                 </xsl:if>
-                                <xsl:if test="$vRef/tss:dates/tss:date[@type='Publication']/@month">
+                                <xsl:if test="$vRef/tss:dates/tss:date[@type='Publication']/@month!=''">
+                                    <xsl:if test="$p_debug = true()">
+                                        <xsl:message>
+                                            <xsl:text>Format the month for the publication date: </xsl:text>
+                                            <xsl:value-of select="$vCitID"/>
+                                        </xsl:message>
+                                    </xsl:if>
                                     <xsl:call-template name="funcDateMonthNameNumber">
                                         <xsl:with-param name="pMonth"
                                             select="$vRef/tss:dates/tss:date[@type='Publication']/@month"/>
@@ -404,7 +410,13 @@
                     <xsl:variable name="vDateOrig">
                         <xsl:value-of
                             select="if($vRef/tss:dates/tss:date[@type='Original']/@day) then(concat($vRef/tss:dates/tss:date[@type='Original']/@day,' ')) else()"/>
-                        <xsl:if test="$vRef/tss:dates/tss:date[@type='Original']/@month">
+                        <xsl:if test="$vRef/tss:dates/tss:date[@type='Original']/@month!=''">
+                            <xsl:if test="$p_debug = true()">
+                                <xsl:message>
+                                    <xsl:text>Format the month for the original publication date: </xsl:text>
+                                    <xsl:value-of select="$vCitID"/>
+                                </xsl:message>
+                            </xsl:if>
                             <xsl:call-template name="funcDateMonthNameNumber">
                                 <xsl:with-param name="pMonth"
                                     select="$vRef/tss:dates/tss:date[@type='Original']/@month"/>
@@ -437,6 +449,12 @@
                         </xsl:variable>
                         <xsl:value-of select="format-number(number(tokenize($vDateG,'-')[1]),'0')"/>
                         <xsl:text> </xsl:text>
+                        <xsl:if test="$p_debug = true()">
+                            <xsl:message>
+                                <xsl:text>Format the Gregorian month transformed from a Hijri date: </xsl:text>
+                                <xsl:value-of select="$vCitID"/>
+                            </xsl:message>
+                        </xsl:if>
                         <xsl:call-template name="funcDateMonthNameNumber">
                             <xsl:with-param name="pMonth" select="number(tokenize($vDateG,'-')[2])"/>
                             <xsl:with-param name="pLang" select="'GEn'"/>
@@ -506,7 +524,13 @@
                         <xsl:value-of
                             select="format-number(number($vRef/tss:dates/tss:date[@type='Retrieval']/@day),'0')"/>
                         <xsl:text> </xsl:text>
-                        <xsl:if test="$vRef/tss:dates/tss:date[@type='Retrieval']/@month">
+                        <xsl:if test="$vRef/tss:dates/tss:date[@type='Retrieval']/@month!=''">
+                            <xsl:if test="$p_debug = true()">
+                                <xsl:message>
+                                    <xsl:text>Format the month for the date of retrieval: </xsl:text>
+                                    <xsl:value-of select="$vCitID"/>
+                                </xsl:message>
+                            </xsl:if>
                             <xsl:call-template name="funcDateMonthNameNumber">
                                 <xsl:with-param name="pMonth"
                                     select="$vRef/tss:dates/tss:date[@type='Retrieval']/@month"/>
