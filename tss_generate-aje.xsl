@@ -109,6 +109,7 @@
                 </tss:characteristic>
             </tss:characteristics>
             <xsl:copy-of select="ancestor::tss:reference/tss:keywords"/>
+            <!-- it wouldn't probably be the worst idea to add a reference to an attached file, even if all new references point to the same file' -->
         </tss:reference>
     </xsl:template>
 
