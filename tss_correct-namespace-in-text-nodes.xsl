@@ -7,7 +7,7 @@
     xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns="http://www.thirdstreetsoftware.com/SenteXML-1.0"
     exclude-result-prefixes="xs html tei tss"
-    version="2.0">
+    version="3.0">
     
     <!-- reproduce all nodes that lack a more specific match argument -->
     <xsl:template match="@* | node()">
