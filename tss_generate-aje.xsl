@@ -11,7 +11,7 @@
     
     <!-- this stylesheet splits Sente references using the markdown content of the abstract field as a guideline. Currently this stylesheet deals with journal / diary entries only but it can be easily adapted to any other reference type -->
     
-    <xsl:include href="tss_escape-functions.xsl"/>
+<!--    <xsl:include href="tss_escape-functions.xsl"/>-->
 
     <xsl:template match="/">
         <xsl:apply-templates select="descendant::tss:characteristic[@name = 'abstractText']"
