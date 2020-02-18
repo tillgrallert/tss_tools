@@ -135,7 +135,7 @@
             <xsl:apply-templates select="@* | node()"/>
         </xsl:element>
     </xsl:template>
-    <xsl:template match="tss:note">
+    <xsl:template match="tss:note[not(parent::tss:notes)]">
         <xsl:element name="tei:note">
             <xsl:apply-templates select="@* | node()"/>
         </xsl:element>

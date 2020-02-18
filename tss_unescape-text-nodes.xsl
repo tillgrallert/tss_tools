@@ -11,7 +11,7 @@
     version="2.0"> 
     
     <!-- identity transform-->
-    <xsl:template match="@* | node()">
+    <xsl:template match="node() | @*">
         <xsl:copy>
             <xsl:apply-templates select="@* | node()"/>
         </xsl:copy>
@@ -30,6 +30,7 @@
     
     <!-- unescape all text() nodes -->
     <!-- PROBLEM: ampersand (&amp;) and individual &lt; should always be escaped because otherwise they will invalidate  the XML output -->
+    <!-- do not unescape tss:title/text() -->
     <xsl:template match="tss:characteristic[@name='abstractText']//text() | tss:comment/text() | tss:quotation/text()">
         <xsl:variable name="v_preprocessed">
             <xsl:apply-templates select="." mode="m_preprocessing"/>
