@@ -31,9 +31,7 @@
                     </tss:references>
                 </tss:library>
             </tss:senteContainer>
-            
         </xsl:result-document>
-        
     </xsl:template>
     
 </xsl:stylesheet>
