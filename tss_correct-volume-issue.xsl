@@ -18,9 +18,9 @@
     </xsl:template>
     
     <xsl:template match="/">
-            <xsl:copy>
-                <xsl:apply-templates/>
-            </xsl:copy>
+        <xsl:copy>
+            <xsl:apply-templates/>
+        </xsl:copy>
     </xsl:template>
     
     <!-- this function checks, if one needs to switch volume and issue information based on a periodical's title.
