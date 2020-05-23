@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AMApplicationBuild</key>
+	<string>444.42</string>
+	<key>AMApplicationVersion</key>
+	<string>2.9</string>
+	<key>AMDocumentVersion</key>
+	<string>2</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
+				<key>ActionName</key>
+				<string>Run AppleScript</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>source</key>
+					<string>on run {input}		(* This script produces a Sente CitationID wrapped in curly braces and attaches text selected in Sente as page numbers after the @ symbol. I.e. {CitationIDofSelectedReference@SelectedText}. It then tries to copy this string into a text editor of the user's choice. *)		(* v3: completely rewrote the script*)		-- the clipboard should be reset to its original content after the end of this script	set theClipboardBefore to (the clipboard as text)	-- activeEditorsList will be populated in the course of the script's execution	set activeEditorsList to {}	-- set a list of text editors whose running status is to be checked. The order can be set to one's own preferences	set editorsList to {"Scrivener", "Sublime Text", "Microsoft Word", "TextEdit", "nvALT"}	-- set a list of output formats	set formatsList to {"Sente", "Pandoc"} -- add Zotero in the future		--    Generate variable with running apps	tell application "System Events"		set activeProcesses to (name of every process)	end tell		--    Generate list of running text editors    	repeat with appName in editorsList		if appName is in activeProcesses then			set activeEditor to appName			set end of activeEditorsList to appName		end if	end repeat		-- ask user to select from running text editors if there are more then one. Otherwiese continue with the sole running text editor or abort the script	set editorCount to (count activeEditorsList)	if editorCount = 1 then		set targetApp to (item 1 of activeEditorsList) as text	else if editorCount &gt; 0 then		set targetApp to (choose from list activeEditorsList with title "Running text editors" with prompt "Pick a text editor to send the reference's CitationID to" default items (item 1 of activeEditorsList) without multiple selections allowed) as text	else		-- Handle 0 items		display dialog "There are no running text editors" buttons {"OK"}		set targetApp to "false"	end if	-- ask user to select an output format	set targetFormat to (choose from list formatsList with title "Available output formats" with prompt "Pick an output format for the citation tag" default items (item 1 of formatsList) without multiple selections allowed) as text			-- retrieve the Citation ID of the selected reference from Sente	tell application "Sente 6"		set theRef to (retrieve selected references current library as tags)		set the clipboard to theRef as text	end tell		-- format the citation tag 	-- Sente output	if targetFormat is "Sente" then		set theTag to "{" &amp; theRef &amp; "}"		-- Pandoc output	else if targetFormat is "Pandoc" then		-- replace blanks with "+"		set theTag to replaceText(theRef, " ", "+")		set theTag to "[@" &amp; theTag &amp; "]"	end if		-- copy the citatin tag to the clipboard	set the clipboard to theTag as text		-- debugging	-- display dialog (the clipboard)		-- paste the CitationID and page number into the selected text editor	if targetApp is not "false" then		tell application targetApp			activate			tell application "System Events"				keystroke "v" using command down			end tell		end tell	end if		-- reset the clipboard to its original content, unfortunately, this action is done before the end of the script	-- set the clipboard to theClipboardBefore as text	end run-- helper functionon replaceText(theText, theSearchString, theReplacementString)	set AppleScript's text item delimiters to theSearchString	set theTextItems to every text item of theText	set AppleScript's text item delimiters to theReplacementString	set theText to theTextItems as text	set AppleScript's text item delimiters to ""	return theTextend replaceText</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.RunScript</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunScriptAction</string>
+				<key>InputUUID</key>
+				<string>4B38366D-6B97-468C-B8CF-D152906E543E</string>
+				<key>Keywords</key>
+				<array>
+					<string>Run</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>4252A275-340E-4B00-B47B-60998053B1E3</string>
+				<key>UUID</key>
+				<string>40B3FF3D-A3A1-4CAE-88B3-5D1DF8E8C4BD</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>669.000000:683.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+	</array>
+	<key>connectors</key>
+	<dict/>
+	<key>workflowMetaData</key>
+	<dict>
+		<key>applicationBundleID</key>
+		<string>com.thirdstreetsoftware.sente6</string>
+		<key>applicationBundleIDsByPath</key>
+		<dict>
+			<key>/Applications/Office-Research/Reference Manager/Sente 6.app</key>
+			<string>com.thirdstreetsoftware.sente6</string>
+		</dict>
+		<key>applicationPath</key>
+		<string>/Applications/Office-Research/Reference Manager/Sente 6.app</string>
+		<key>applicationPaths</key>
+		<array>
+			<string>/Applications/Office-Research/Reference Manager/Sente 6.app</string>
+		</array>
+		<key>inputTypeIdentifier</key>
+		<string>com.apple.Automator.nothing</string>
+		<key>outputTypeIdentifier</key>
+		<string>com.apple.Automator.nothing</string>
+		<key>presentationMode</key>
+		<integer>11</integer>
+		<key>processesInput</key>
+		<integer>0</integer>
+		<key>serviceApplicationBundleID</key>
+		<string>com.thirdstreetsoftware.sente6</string>
+		<key>serviceApplicationPath</key>
+		<string>/Applications/Office-Research/Reference Manager/Sente 6.app</string>
+		<key>serviceInputTypeIdentifier</key>
+		<string>com.apple.Automator.nothing</string>
+		<key>serviceOutputTypeIdentifier</key>
+		<string>com.apple.Automator.nothing</string>
+		<key>serviceProcessesInput</key>
+		<integer>0</integer>
+		<key>systemImageName</key>
+		<string>NSActionTemplate</string>
+		<key>useAutomaticInputType</key>
+		<integer>0</integer>
+		<key>workflowTypeIdentifier</key>
+		<string>com.apple.Automator.servicesMenu</string>
+	</dict>
+</dict>
+</plist>
