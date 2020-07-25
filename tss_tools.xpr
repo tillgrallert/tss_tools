@@ -550,6 +550,7 @@
         </options>
     </meta>
     <projectTree name="tss_tools.xpr">
+        <folder path="../convert_tss-to-bibliographic-data/"/>
         <folder path="../tss_data/"/>
         <folder path="."/>
     </projectTree>
