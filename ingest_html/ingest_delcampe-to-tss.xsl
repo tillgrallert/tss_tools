@@ -62,11 +62,11 @@
                     <xsl:variable name="v_id-auction">
                         <xsl:apply-templates select="." mode="m_id-auction"/>
                     </xsl:variable>
-                    <xsl:variable name="vUrl1" select="'http://images-'"/>
-                    <xsl:variable name="vUrl2" select="'.delcampe-static.net/img_large/auction/000/'"/>
+<!--                    <xsl:variable name="vUrl1" select="'http://images-'"/>-->
+                    <xsl:variable name="vUrl2" select="'https://delcampe-static.net/img_large/auction/000/'"/>
                     <xsl:variable name="vUrl3" select="concat(substring($v_id-auction,1,3),'/',substring($v_id-auction,4,3),'/',substring($v_id-auction,7,3),'_00')"/>
                     
-                    <xsl:value-of select="concat($vUrl1,'00',$vUrl2,$vUrl3,'1.jpg')"/><![CDATA[","]]><xsl:value-of select="concat($vUrl1,'00',$vUrl2,$vUrl3,'2.jpg')"/><![CDATA[","]]><xsl:value-of select="concat($vUrl1,'00',$vUrl2,$vUrl3,'3.jpg')"/>
+                    <xsl:value-of select="concat($vUrl2,$vUrl3,'1.jpg')"/><![CDATA[","]]><xsl:value-of select="concat($vUrl2,$vUrl3,'2.jpg')"/><![CDATA[","]]><xsl:value-of select="concat($vUrl2,$vUrl3,'3.jpg')"/>
                     <xsl:if test="not(position()=last())">
                         <![CDATA[","]]>
                     </xsl:if>
