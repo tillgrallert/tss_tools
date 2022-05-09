@@ -27,7 +27,7 @@
                 <xsl:attribute name="version">1.0</xsl:attribute>
                 <xsl:element name="tss:library">
                     <xsl:element name="tss:references">
-                        <xsl:apply-templates select="html:body//html:a"/>
+                        <xsl:apply-templates select="html:body//html:a" mode="m_test"/>
                     </xsl:element>
                 </xsl:element>
             </xsl:element>
@@ -36,17 +36,17 @@
     <xsl:template match="html:a" mode="m_test">
         <ab>
             <span>
-                <xsl:copy-of select="oape:ebay-get-image(@href)"/>
+                <xsl:copy-of select="oape:ebay-get-data(@href, 'id')"/>
             </span>
             <span>
-                <xsl:copy-of select="oape:ebay-get-title(@href)"/>
+                <xsl:copy-of select="oape:ebay-get-data(@href, 'image')"/>
+            </span>
+            <span>
+                <xsl:copy-of select="oape:ebay-get-data(@href, 'title')"/>
             </span>
             <span>
                 <xsl:copy-of select="oape:ebay-get-images(@href)"/>
             </span>
-        </ab>
-        <ab>
-            <xsl:copy-of select="oape:ebay-get-meta(@href)"/>
         </ab>
     </xsl:template>
     <xsl:function name="oape:ebay-get-data">
@@ -67,51 +67,43 @@
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:when>
-        </xsl:choose>
-    </xsl:function>
-    <xsl:function name="oape:ebay-get-id">
-        <xsl:param as="xs:string" name="p_url"/>
-        <xsl:choose>
-            <xsl:when test="matches($p_url, 'ebay\.')">
-                <xsl:value-of select="replace($p_url, '^.+/(\d+).*$', '$1')"/>
+            <xsl:when test="$p_output = 'url'">
+                <xsl:variable name="v_id" select="oape:ebay-get-data($p_url, 'id')"/>
+                <xsl:value-of select="concat($p_url-base-ebay, $v_id)"/>
             </xsl:when>
+            <!-- get info from meta tag -->
+            <xsl:when test="$p_output = 'image'">
+                <xsl:variable name="v_meta" select="oape:ebay-get-data($p_url, 'meta')"/>
+                <xsl:apply-templates mode="m_meta" select="$v_meta/self::html:meta[@property = 'og:image']"/>
+            </xsl:when>
+            <xsl:when test="$p_output = 'title'">
+                <xsl:variable name="v_meta" select="oape:ebay-get-data($p_url, 'meta')"/>
+                <xsl:apply-templates mode="m_meta" select="$v_meta/self::html:meta[@property = 'og:title']"/>
+            </xsl:when>
+            <!-- scrape data from an Ebay item website -->
             <xsl:otherwise>
-                <xsl:message>
-                    <xsl:text>It seems the input (</xsl:text>
-                    <xsl:value-of select="$p_url"/>
-                    <xsl:text>) is not an Ebay URL.</xsl:text>
-                </xsl:message>
+                <xsl:variable name="v_id" select="oape:ebay-get-data($p_url, 'id')"/>
+                <xsl:variable as="xs:string" name="v_url-item" select="concat($p_url-base-ebay, $v_id)"/>
+                <xsl:variable name="v_raw-html" select="unparsed-text($v_url-item)"/>
+                <xsl:choose>
+                    <!-- rebuild the <html:meta> tag -->
+                    <xsl:when test="$p_output = 'meta'">
+                        <xsl:analyze-string flags="i" regex="meta\s+(name|property)=&quot;(.+?)&quot;\s+(content)=&quot;(.+?)&quot;" select="$v_raw-html">
+                            <xsl:matching-substring>
+                                <meta>
+                                    <xsl:attribute name="{lower-case(regex-group(1))}">
+                                        <xsl:value-of disable-output-escaping="true" select="normalize-space(regex-group(2))"/>
+                                    </xsl:attribute>
+                                    <xsl:attribute name="{lower-case(regex-group(3))}">
+                                        <xsl:value-of disable-output-escaping="true" select="normalize-space(regex-group(4))"/>
+                                    </xsl:attribute>
+                                </meta>
+                            </xsl:matching-substring>
+                        </xsl:analyze-string>
+                    </xsl:when>
+                </xsl:choose>
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:function>
-    <xsl:function name="oape:ebay-get-meta">
-        <xsl:param as="xs:string" name="p_url"/>
-        <xsl:variable name="v_item" select="oape:ebay-get-id($p_url)"/>
-        <xsl:variable as="xs:string" name="v_url-item" select="concat($p_url-base-ebay, $v_item)"/>
-        <xsl:variable name="v_raw-html" select="unparsed-text($v_url-item)"/>
-        <!-- select bits and pieces of the raw HTML with regex -->
-        <xsl:analyze-string flags="i" regex="meta\s+(name|property)=&quot;(.+?)&quot;\s+(content)=&quot;(.+?)&quot;" select="$v_raw-html">
-            <xsl:matching-substring>
-                <meta>
-                    <xsl:attribute name="{lower-case(regex-group(1))}">
-                        <xsl:value-of disable-output-escaping="true" select="normalize-space(regex-group(2))"/>
-                    </xsl:attribute>
-                    <xsl:attribute name="{lower-case(regex-group(3))}">
-                        <xsl:value-of disable-output-escaping="true" select="normalize-space(regex-group(4))"/>
-                    </xsl:attribute>
-                </meta>
-            </xsl:matching-substring>
-        </xsl:analyze-string>
-    </xsl:function>
-    <xsl:function name="oape:ebay-get-image">
-        <xsl:param as="xs:string" name="p_url"/>
-        <xsl:variable name="v_meta" select="oape:ebay-get-meta($p_url)"/>
-        <xsl:apply-templates mode="m_meta" select="$v_meta/self::html:meta[@property = 'og:image']"/>
-    </xsl:function>
-    <xsl:function name="oape:ebay-get-title">
-        <xsl:param as="xs:string" name="p_url"/>
-        <xsl:variable name="v_meta" select="oape:ebay-get-meta($p_url)"/>
-        <xsl:apply-templates mode="m_meta" select="$v_meta/self::html:meta[@property = 'og:title']"/>
     </xsl:function>
     <xsl:template match="html:meta[@property = 'og:image']" mode="m_meta">
         <xsl:variable name="v_id-image" select="replace(@content, concat($p_url-base-image-ebay, '(.+?)/.+$'), '$1')"/>
@@ -123,7 +115,7 @@
     </xsl:template>
     <xsl:function name="oape:ebay-get-images">
         <xsl:param as="xs:string" name="p_url"/>
-        <xsl:variable name="v_item" select="oape:ebay-get-id($p_url)"/>
+        <xsl:variable name="v_item" select="oape:ebay-get-data($p_url, 'id')"/>
         <xsl:variable as="xs:string" name="v_url-item" select="concat($p_url-base-ebay, $v_item)"/>
         <xsl:variable name="v_raw-html" select="unparsed-text($v_url-item)"/>
         <!-- select bits and pieces of the raw HTML with regex -->
@@ -142,8 +134,8 @@
         <xsl:variable name="v_url-base" select="$p_url-base-ebay"/>
         <!-- links follow this pattern: http://www.ebay.com/itm/syria-DAMAS-DAMASCUS-Gouvernment-House-1910s-RPPC-/360952344727?hash=item540a6fb097:g:lNgAAOxy3cJTjecD -->
         <xsl:variable name="v_url" select="@href"/>
-        <xsl:variable name="v_id" select="oape:ebay-get-id($v_url)"/>
-        <xsl:variable name="v_title" select="oape:ebay-get-title($v_url)"/>
+        <xsl:variable name="v_id" select="oape:ebay-get-data($v_url, 'id')"/>
+        <xsl:variable name="v_title" select="oape:ebay-get-data($v_url, 'title')"/>
         <xsl:variable name="vDate" select="current-date()"/>
         <xsl:element name="tss:reference">
             <xsl:element name="tss:publicationType">
@@ -217,7 +209,7 @@
             </xsl:element>
             <xsl:element name="tss:attachments">
                 <xsl:call-template name="t_create-attachment">
-                    <xsl:with-param name="p_url" select="oape:ebay-get-image($v_url)"/>
+                    <xsl:with-param name="p_url" select="oape:ebay-get-data($v_url, 'image')"/>
                 </xsl:call-template>
             </xsl:element>
             <!--<xsl:element name="tss:attachments">
