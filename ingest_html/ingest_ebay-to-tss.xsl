@@ -17,12 +17,13 @@
     - mode m5 produces an applescript to download the image files to the hd 
     - mode m4 produces the Sente XML references with links to the downloaded images
     -->
-    <xsl:variable name="vgDate" select="current-date()"/>
+    <xsl:variable name="v_today" select="current-date()"/>
     <xsl:param name="p_url-base-ebay" select="'https://www.ebay.de/itm/'"/>
     <xsl:param name="p_url-base-image-ebay" select="'https://i.ebayimg.com/images/g/'"/>
-    <xsl:param name="p_image-resolution" select="2000"/>
+    <xsl:param name="p_url-base-image-ebay-main" select="'https://i.ebayimg.com/d/w1600/pict/'"/>
+    <xsl:param name="p_image-resolution" select="1600"/>
     <xsl:template match="html:html">
-        <xsl:result-document href="ebay2Sente {format-date($vgDate,'[Y01][M01][D01]')}.Sente.xml" method="xml">
+        <xsl:result-document href="ebay2Sente {format-date($v_today,'[Y0001]-[M01]-[D01]')}.TSS.xml" method="xml">
             <xsl:element name="tss:senteContainer">
                 <xsl:attribute name="version">1.0</xsl:attribute>
                 <xsl:element name="tss:library">
@@ -39,13 +40,7 @@
                 <xsl:copy-of select="oape:ebay-get-data(@href, 'id')"/>
             </span>
             <span>
-                <xsl:copy-of select="oape:ebay-get-data(@href, 'image')"/>
-            </span>
-            <span>
-                <xsl:copy-of select="oape:ebay-get-data(@href, 'title')"/>
-            </span>
-            <span>
-                <xsl:copy-of select="oape:ebay-get-images(@href)"/>
+                <xsl:copy-of select="oape:ebay-get-data(@href, 'url-img')"/>
             </span>
         </ab>
     </xsl:template>
@@ -67,12 +62,16 @@
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:when>
-            <xsl:when test="$p_output = 'url'">
+            <xsl:when test="$p_output = 'url-item'">
                 <xsl:variable name="v_id" select="oape:ebay-get-data($p_url, 'id')"/>
                 <xsl:value-of select="concat($p_url-base-ebay, $v_id)"/>
             </xsl:when>
+            <xsl:when test="$p_output = 'url-img-main'">
+                <xsl:variable name="v_id" select="oape:ebay-get-data($p_url, 'id')"/>
+                <xsl:value-of select="concat($p_url-base-image-ebay-main, $v_id, '_/')"/>
+            </xsl:when>
             <!-- get info from meta tag -->
-            <xsl:when test="$p_output = 'image'">
+            <xsl:when test="$p_output = 'url-image'">
                 <xsl:variable name="v_meta" select="oape:ebay-get-data($p_url, 'meta')"/>
                 <xsl:apply-templates mode="m_meta" select="$v_meta/self::html:meta[@property = 'og:image']"/>
             </xsl:when>
@@ -86,6 +85,13 @@
                 <xsl:variable as="xs:string" name="v_url-item" select="concat($p_url-base-ebay, $v_id)"/>
                 <xsl:variable name="v_raw-html" select="unparsed-text($v_url-item)"/>
                 <xsl:choose>
+                    <xsl:when test="$p_output = 'img'">
+                        <xsl:analyze-string flags="i" regex="(&lt;div\s+id=&quot;vi_main_img_fs_hidden&quot;.+?&lt;/div&gt;)" select="$v_raw-html">
+                            <xsl:matching-substring>
+                                <xsl:value-of select="regex-group(1)" disable-output-escaping="true"/>
+                            </xsl:matching-substring>
+                        </xsl:analyze-string>
+                    </xsl:when>
                     <!-- rebuild the <html:meta> tag -->
                     <xsl:when test="$p_output = 'meta'">
                         <xsl:analyze-string flags="i" regex="meta\s+(name|property)=&quot;(.+?)&quot;\s+(content)=&quot;(.+?)&quot;" select="$v_raw-html">
@@ -164,10 +170,10 @@
                     <xsl:attribute name="name">abstractText</xsl:attribute>
                     <xsl:value-of select="$v_title"/>
                 </xsl:element>
-                <xsl:element name="tss:characteristic">
+                <!--<xsl:element name="tss:characteristic">
                     <xsl:attribute name="name">publicationStatus</xsl:attribute>
                     <xsl:text>Published</xsl:text>
-                </xsl:element>
+                </xsl:element>-->
                 <xsl:element name="tss:characteristic">
                     <xsl:attribute name="name">Medium consulted</xsl:attribute>
                     <xsl:text>Web</xsl:text>
@@ -182,7 +188,7 @@
                 </xsl:element>
                 <xsl:element name="tss:characteristic">
                     <xsl:attribute name="name">URL</xsl:attribute>
-                    <xsl:value-of select="concat($p_url-base-ebay, $v_id)"/>
+                    <xsl:value-of select="oape:ebay-get-data($v_url, 'url-item')"/>
                 </xsl:element>
                 <xsl:element name="tss:characteristic">
                     <xsl:attribute name="name">Web data source</xsl:attribute>
@@ -209,20 +215,9 @@
             </xsl:element>
             <xsl:element name="tss:attachments">
                 <xsl:call-template name="t_create-attachment">
-                    <xsl:with-param name="p_url" select="oape:ebay-get-data($v_url, 'image')"/>
+                    <xsl:with-param name="p_url" select="oape:ebay-get-data($v_url, 'url-img')"/>
                 </xsl:call-template>
             </xsl:element>
-            <!--<xsl:element name="tss:attachments">
-                    <xsl:variable name="vNum" select="'1,2,3'"/>
-                        <xsl:for-each select="tokenize($vNum,',')"> <!-\- to account for some issues with more pages, the range is significantly longer then the standard number of pages per issue -\->
-                            <xsl:variable name="vImg" select="number(.)"/>
-                            <xsl:element name="tss:attachmentReference">
-                                <xsl:element name="URL">
-                                    <xsl:value-of select="concat($vUrlImgBase,$vAucID,'_00',$vImg,'.jpg')"/>
-                                </xsl:element>
-                            </xsl:element>
-                        </xsl:for-each>
-                </xsl:element>-->
         </xsl:element>
     </xsl:template>
     <xsl:template name="t_create-attachment">
