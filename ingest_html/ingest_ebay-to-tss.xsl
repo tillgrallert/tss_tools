@@ -17,13 +17,13 @@
     - mode m5 produces an applescript to download the image files to the hd 
     - mode m4 produces the Sente XML references with links to the downloaded images
     -->
-    <xsl:variable name="v_today" select="current-date()"/>
+    <xsl:variable name="v_today" select="format-date(current-date(),'[Y0001]-[M01]-[D01]')"/>
     <xsl:param name="p_url-base-ebay" select="'https://www.ebay.de/itm/'"/>
     <xsl:param name="p_url-base-image-ebay" select="'https://i.ebayimg.com/images/g/'"/>
     <xsl:param name="p_url-base-image-ebay-main" select="'https://i.ebayimg.com/d/w1600/pict/'"/>
     <xsl:param name="p_image-resolution" select="1600"/>
     <xsl:template match="html:html">
-        <xsl:result-document href="ebay2Sente {format-date($v_today,'[Y0001]-[M01]-[D01]')}.TSS.xml" method="xml">
+        <xsl:result-document href="_output/ebay-to-tss_{$v_today}.TSS.xml" method="xml">
             <xsl:element name="tss:senteContainer">
                 <xsl:attribute name="version">1.0</xsl:attribute>
                 <xsl:element name="tss:library">
