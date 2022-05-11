@@ -11,7 +11,8 @@
     
     <!-- this stylesheet fixes archival material by removing citations from the title -->
     <!-- it also fixes purely numerical article titles for periodicals -->
-    <!-- to do: writa all additional information helping to locate stuff in archives to the call-num -->
+    <!-- to do: write all additional information helping to locate stuff in archives to the call-num -->
+    
     
     <!-- identify transform -->
     <xsl:template match="@* | node()">
@@ -67,8 +68,10 @@
     </xsl:template>
     
     <xsl:template match="tss:reference[contains(tss:publicationType/@name, 'Archival')]">
+        <xsl:variable name="v_type" select="tss:publicationType/@name"/>
+        <xsl:variable name="v_date" select="descendant::tss:date[@type = 'Publication']"/>
         <xsl:variable name="v_year">
-            <xsl:value-of select="descendant::tss:date[@type = 'Publication']/@year"/>
+            <xsl:value-of select="$v_date/@year"/>
         </xsl:variable>
         <!--<xsl:message>
             <xsl:value-of select="$v_year"/>
@@ -80,6 +83,32 @@
             <xsl:apply-templates select="tss:dates"/>
             <xsl:copy select="tss:characteristics">
                 <xsl:apply-templates/>
+                <!-- add a new article title for diary/ journal entries -->
+                <xsl:if test="not(descendant::tss:characteristic[@name = 'articleTitle']) and contains($v_type, 'Entry')">
+                    <!--<xsl:message terminate="no">
+                        <xsl:value-of select="tss:publicationType/@name"/>
+                        <xsl:value-of select="$v_type"/>
+                    </xsl:message>-->
+                    <xsl:variable name="v_date-of-entry">
+                        <xsl:choose>
+                            <xsl:when test="$v_date[@year][@month][@day]">
+                                <xsl:value-of select="concat( format-number($v_date/@year, '0000'), '-', format-number($v_date/@month, '00'), '-', format-number($v_date/@day, '00'))"/>
+                            </xsl:when>
+                        </xsl:choose>
+                    </xsl:variable>
+                    <xsl:element name="tss:characteristic">
+                        <xsl:attribute name="name" select="'articleTitle'"/>
+                        <xsl:text>[Entry of </xsl:text>
+                        <!-- date: -->
+                        <xsl:if test="matches($v_date-of-entry, '\d{4}-\d{2}-\d{2}')">
+                            <!--<xsl:message>
+                                <xsl:text>is ISO date</xsl:text>
+                            </xsl:message>-->
+                            <xsl:value-of select="format-date(xs:date($v_date-of-entry), '[D1] [MNn] [Y0001]')"/>
+                        </xsl:if>
+                        <xsl:text>]</xsl:text>
+                    </xsl:element>
+                </xsl:if>
                 <!-- add new call-number -->
                 <xsl:if test="not(descendant::tss:characteristic[@name = 'call-num']) and descendant::tss:characteristic[@name = ('Code', 'Item', 'File')]">
                     <xsl:element name="tss:characteristic">
@@ -114,4 +143,51 @@
             <xsl:text> is purely nummerical</xsl:text>
         </xsl:message>-->
     </xsl:template>
+    <!-- archival journal entries often have no proper entry title -->
+    
+    <!-- fix reference types for bills: this is particularly relevant if the target format is Zotero -->
+    <xsl:template match="tss:reference[tss:publicationType/@name = 'Bill']">
+        <xsl:copy>
+            <xsl:apply-templates select="@*"/>
+            <xsl:element name="tss:publicationType">
+                <xsl:attribute name="name">
+                    <!-- select reference type depending on other information -->
+                    <xsl:choose>
+                        <xsl:when test="descendant::tss:keyword = 'newspaper/periodical'">
+                            <xsl:text>Newspaper article</xsl:text>
+                        </xsl:when>
+                        <xsl:when test="descendant::tss:characteristic[@name = 'publisher']">
+                            <xsl:text>Book Chapter</xsl:text>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:text>Bill</xsl:text>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:attribute>
+            </xsl:element>
+            <!-- reproduce content -->
+            <xsl:apply-templates select="tss:authors | tss:dates | tss:characteristics"/>
+            <xsl:copy select="tss:keywords">
+                <xsl:apply-templates select="descendant::tss:keyword"/>
+                <xsl:element name="tss:keyword">
+                    <xsl:text>reference-type_bill</xsl:text>
+                </xsl:element>
+            </xsl:copy>
+            <xsl:apply-templates select="tss:notes | tss:attachments"/>
+        </xsl:copy>
+    </xsl:template>
+    
+    <xsl:template match="tss:characteristic[@name='Short Titel']">
+        <xsl:copy>
+            <xsl:choose>
+                <!-- For bills, I commonly recorded a short version of the container title in this field  -->
+                <xsl:when test="ancestor::tss:reference/tss:publicationType/@name = 'Bill'"/>
+                <xsl:otherwise>
+                    <xsl:attribute name="name" select="'Shortened title'"/>
+                    <xsl:apply-templates/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:copy>
+    </xsl:template>
+    
 </xsl:stylesheet>
