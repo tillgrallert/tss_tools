@@ -1,0 +1,1379 @@
+{
+    "p": "101121",
+    "t": [
+        "/@ebay/merch-ui-component$3.9.8/src/components/merch-ui-component/index.marko"
+    ],
+    "w": [
+        [
+            "1011210-c0",
+            0,
+            {
+                "model": {
+                    "modules": {
+                        "MERCH_PLACEMENT_101121": {
+                            "_type": "ADS_AND_MERCH_LIST_V2",
+                            "containers": [
+                                {
+                                    "_type": "CardListContainer",
+                                    "cardContainers": [
+                                        {
+                                            "_type": "CardContainer",
+                                            "cards": [
+                                                {
+                                                    "__merchandising": {
+                                                        "group3Slots": [
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "+ EUR 5,99 Versand",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "+ EUR 5,99 Versand",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "+ EUR 5,99 Versand"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "Verkäufer 99.6% positiv",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "Verkäufer 99.6% positiv",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "Verkäufer 99.6% positiv"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_type": "ItemCard",
+                                                    "action": {
+                                                        "URL": "https://www.ebay.de/itm/374019457210?_trkparms=amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D1%26rkt%3D12%26sd%3D294948697337%26itm%3D374019457210%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault&_trksid=p2563228.c101121.m1986&amdata=cksum%3A374019457210eae51941cd5541eb825be9de61fd8d49%7Cenc%3AAQAGAAAA4LVNCBwdYa5B4%252FCpf4Qe2hcPBr2MgwGrWqNXoh%252F3DIo%252BgN9421HSEIGh4wH3ZN6S1e1bYZm2gNcKTRxOFrFF6Dah7bI8K2pHYlXyuXp6aJL6yJwvZ%252FzRgIH8M33%252Fqz4pNW9rawnrRx2ODq%252Fq1%252FSmZk0w%252FR1ytM6Mt8wPmQ1afZ0TxoebDuAzDCIJK%252FkdDqpn795v2Z3GPur7TM0IUrLh3ra1LVCTywS71nC4%252Bpo1WLD2ln%252BLDSAdoR48oFs9Et21zVAyvIg7pylhZRifRHPiWsy7VpIjgM0EJnNfCou%252FRZdO%7Campid%3APL_CLK%7Cclp%3A2563228",
+                                                        "_type": "Action",
+                                                        "name": "VIEW_ITEM",
+                                                        "params": {
+                                                            "listingId": "374019457210"
+                                                        },
+                                                        "trackingList": [
+                                                            {
+                                                                "actionKind": "NAV",
+                                                                "eventProperty": {
+                                                                    "amdata": "amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D1%26rkt%3D12%26mehot%3Dpf%26sd%3D294948697337%26itm%3D374019457210%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault",
+                                                                    "ammiid": "eae51941cd5541eb825be9de61fd8d49",
+                                                                    "ampid": "PL_CLK",
+                                                                    "checksum": "374019457210eae51941cd5541eb825be9de61fd8d49",
+                                                                    "enc": "AQAGAAAA4LVNCBwdYa5B4/Cpf4Qe2hcPBr2MgwGrWqNXoh/3DIo+gN9421HSEIGh4wH3ZN6S1e1bYZm2gNcKTRxOFrFF6Dah7bI8K2pHYlXyuXp6aJL6yJwvZ/zRgIH8M33/qz4pNdvIHCm8PpKtHEwer+rEqFyNREXazdd8jpH/i5TTwsjpnV1qVcJsK6Dkf3A9fMqWnU9CwSQrytgnpDMokti2CrkSZqVCed36oFPakyGtB7xsGJ6SPdvt2FoFrr/iGPzXckloiDj8RcZ2TfJIOAszyO8P700gQ8DURO0zWW9y4IOG",
+                                                                    "parentrq": "c61bcb7d2b9f4c72",
+                                                                    "sid": "p2047675.m1986.c20200818142238"
+                                                                },
+                                                                "flushImmediately": false,
+                                                                "operationId": "2047675"
+                                                            }
+                                                        ],
+                                                        "type": "NAV"
+                                                    },
+                                                    "displayPrice": {
+                                                        "_type": "TextualDisplayValue",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "EUR 29,99"
+                                                            }
+                                                        ],
+                                                        "value": {
+                                                            "currency": "EUR",
+                                                            "value": 29.99
+                                                        }
+                                                    },
+                                                    "id": "374019457210-NIL-NIL",
+                                                    "image": {
+                                                        "URL": "https://i.ebayimg.com/thumbs/images/g/kS8AAOSwJjZiVohn/s-l200.jpg",
+                                                        "_type": "Image",
+                                                        "imageId": "kS8AAOSwJjZiVohn",
+                                                        "imageIdType": "ZOOM_GUID",
+                                                        "originalSize": {
+                                                            "height": 1066,
+                                                            "width": 1600
+                                                        },
+                                                        "title": "BAWKc) Jerusalem Israel Ölberg Damaskus Tor Architektur 1914-1918 WK1 WWI 34x27"
+                                                    },
+                                                    "listingId": "374019457210",
+                                                    "presentityId": "374019457210-NIL-NIL",
+                                                    "purchaseOptions": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Sofort-Kaufen"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "title": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "BAWKc) Jerusalem Israel Ölberg Damaskus Tor Architektur 1914-1918 WK1 WWI 34x27"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "__merchandising": {
+                                                        "group3Slots": [
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "+ EUR 4,50 Versand",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "+ EUR 4,50 Versand",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "+ EUR 4,50 Versand"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "Verkäufer 99.7% positiv",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "Verkäufer 99.7% positiv",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "Verkäufer 99.7% positiv"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_type": "ItemCard",
+                                                    "action": {
+                                                        "URL": "https://www.ebay.de/itm/294485110973?_trkparms=amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D2%26rkt%3D12%26sd%3D294948697337%26itm%3D294485110973%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault&_trksid=p2563228.c101121.m1986&amdata=cksum%3A294485110973eae51941cd5541eb825be9de61fd8d49%7Cenc%3AAQAGAAAA4LVNCBwdYa5B4%252FCpf4Qe2heqTZA7eSOG9JdlJibhzzUl0yUujQ8DW3K0XWucTRAdSdmD9gfbqKM4EeCcBxkR4MjUUp6UKcTlLyHHqzZUMXRfrrNADBX1rKo36jpl0hyWzyEtE8Ctpbd%252FSOpwyH3Nf%252FOXWSgHTMq5s4DxK%252Ft5bVVvcOCiTVZ25cq5j8gzxXaEGufpOpr8GnOMXIQkr6ZW0vcfQ0yL2zt5enXEHlEspu4C9O4Xdcros9bfu%252BCB8pl1NwuDCTfwwJdocYGH7AMPCGmh%252B0zPeP0pqukHz1LuyASf%7Campid%3APL_CLK%7Cclp%3A2563228",
+                                                        "_type": "Action",
+                                                        "name": "VIEW_ITEM",
+                                                        "params": {
+                                                            "listingId": "294485110973"
+                                                        },
+                                                        "trackingList": [
+                                                            {
+                                                                "actionKind": "NAV",
+                                                                "eventProperty": {
+                                                                    "amdata": "amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D2%26rkt%3D12%26mehot%3Dpf%26sd%3D294948697337%26itm%3D294485110973%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault",
+                                                                    "ammiid": "eae51941cd5541eb825be9de61fd8d49",
+                                                                    "ampid": "PL_CLK",
+                                                                    "checksum": "294485110973eae51941cd5541eb825be9de61fd8d49",
+                                                                    "enc": "AQAGAAAA4LVNCBwdYa5B4/Cpf4Qe2heqTZA7eSOG9JdlJibhzzUl0yUujQ8DW3K0XWucTRAdSdmD9gfbqKM4EeCcBxkR4MjUUp6UKcTlLyHHqzZUMXRfrrNADBX1rKo36jpl0hyWzxZxf79tSuxjv7BaRJg6c7lFCpC1wkumCLfQzbvy4K/SSNmT6BC5k8vSlPqt5G8HsTRJ5ANltdzwRqK1TBrXG5kyUk2Hvje0ooTSTMePDWHKBgJHx7Lztb4BcNyYvHb8Do7a2jjUl7UafdHQC6Jm5ae3rG1pSrg6z0IdNYmpoV2N",
+                                                                    "parentrq": "c61bcb7d2b9f4c72",
+                                                                    "sid": "p2047675.m1986.c20200818142238"
+                                                                },
+                                                                "flushImmediately": false,
+                                                                "operationId": "2047675"
+                                                            }
+                                                        ],
+                                                        "type": "NAV"
+                                                    },
+                                                    "displayPrice": {
+                                                        "_type": "TextualDisplayValue",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "EUR 34,90"
+                                                            }
+                                                        ],
+                                                        "value": {
+                                                            "currency": "EUR",
+                                                            "value": 34.9
+                                                        }
+                                                    },
+                                                    "id": "294485110973-NIL-NIL",
+                                                    "image": {
+                                                        "URL": "https://i.ebayimg.com/thumbs/images/g/vyYAAOSwG~NhjlLU/s-l200.jpg",
+                                                        "_type": "Image",
+                                                        "imageId": "vyYAAOSwG~NhjlLU",
+                                                        "imageIdType": "ZOOM_GUID",
+                                                        "originalSize": {
+                                                            "height": 706,
+                                                            "width": 810
+                                                        },
+                                                        "title": "Foto WK I Strassen Szene Weißkirchen Bela Crkva Бела Црква Serbien Србија H1.30"
+                                                    },
+                                                    "listingId": "294485110973",
+                                                    "presentityId": "294485110973-NIL-NIL",
+                                                    "purchaseOptions": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Sofort-Kaufen"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "title": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Foto WK I Strassen Szene Weißkirchen Bela Crkva Бела Црква Serbien Србија H1.30"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "__merchandising": {
+                                                        "group3Slots": [
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "+ EUR 4,50 Versand",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "+ EUR 4,50 Versand",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "+ EUR 4,50 Versand"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "Verkäufer 99.7% positiv",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "Verkäufer 99.7% positiv",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "Verkäufer 99.7% positiv"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_type": "ItemCard",
+                                                    "action": {
+                                                        "URL": "https://www.ebay.de/itm/294962170722?_trkparms=amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D3%26rkt%3D12%26sd%3D294948697337%26itm%3D294962170722%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault&_trksid=p2563228.c101121.m1986&amdata=cksum%3A294962170722eae51941cd5541eb825be9de61fd8d49%7Cenc%3AAQAGAAAA4LVNCBwdYa5B4%252FCpf4Qe2hfipEM8dP0YI7ST80TpiYRxXji9nChFX4GPDrV9ZinhNkDbf7D8sXbfVQb1rLqRWc0dA0G9KiaQA4OlabcTtOPPHQplxeWk5uwD7mhcO3vQBsqFlMosfTyfSf4bx9EAhrrVK1hudYxwWsSb%252BOzoLR75x3ar7wiEZNdXhXmCNGokDTlTkA0e%252FbBwm8HPTy0kneXBTivjBYracvx2VaCZmE4ZejuwsPtAhxKdlUuQvnIuQpzkzdwW1wx1AaV9YtH5fw0C1xl8dyUEGndW0CI3GzV3%7Campid%3APL_CLK%7Cclp%3A2563228",
+                                                        "_type": "Action",
+                                                        "name": "VIEW_ITEM",
+                                                        "params": {
+                                                            "listingId": "294962170722"
+                                                        },
+                                                        "trackingList": [
+                                                            {
+                                                                "actionKind": "NAV",
+                                                                "eventProperty": {
+                                                                    "amdata": "amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D3%26rkt%3D12%26mehot%3Dpf%26sd%3D294948697337%26itm%3D294962170722%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault",
+                                                                    "ammiid": "eae51941cd5541eb825be9de61fd8d49",
+                                                                    "ampid": "PL_CLK",
+                                                                    "checksum": "294962170722eae51941cd5541eb825be9de61fd8d49",
+                                                                    "enc": "AQAGAAAA4LVNCBwdYa5B4/Cpf4Qe2hfipEM8dP0YI7ST80TpiYRxXji9nChFX4GPDrV9ZinhNkDbf7D8sXbfVQb1rLqRWc0dA0G9KiaQA4OlabcTtOPPHQplxeWk5uwD7mhcO3vQBvsgrRIPz1bLXf6Jw825jJXOulN4lZtE6nEGvE7btL9Bsxgt8ots0t+B8fTR7irGWAKkdgGl3rM6uesS+a7TRt7frMhqM0qo35u95xkBUbSOxy566SpekGfXHJ7kjE1keB8QzLwAMQ49i3rf+ogAFIPvBN8tvi3d0ycCsY5jRTfU",
+                                                                    "parentrq": "c61bcb7d2b9f4c72",
+                                                                    "sid": "p2047675.m1986.c20200818142238"
+                                                                },
+                                                                "flushImmediately": false,
+                                                                "operationId": "2047675"
+                                                            }
+                                                        ],
+                                                        "type": "NAV"
+                                                    },
+                                                    "displayPrice": {
+                                                        "_type": "TextualDisplayValue",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "EUR 34,90"
+                                                            }
+                                                        ],
+                                                        "value": {
+                                                            "currency": "EUR",
+                                                            "value": 34.9
+                                                        }
+                                                    },
+                                                    "id": "294962170722-NIL-NIL",
+                                                    "image": {
+                                                        "URL": "https://i.ebayimg.com/thumbs/images/g/77oAAOSwbMtib9kT/s-l200.jpg",
+                                                        "_type": "Image",
+                                                        "imageId": "77oAAOSwbMtib9kT",
+                                                        "imageIdType": "ZOOM_GUID",
+                                                        "originalSize": {
+                                                            "height": 728,
+                                                            "width": 1008
+                                                        },
+                                                        "title": "Foto WK II Wehrmacht Soldaten Kirchen Ruine Bauernhaus OstfrontK1.58"
+                                                    },
+                                                    "listingId": "294962170722",
+                                                    "presentityId": "294962170722-NIL-NIL",
+                                                    "purchaseOptions": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Sofort-Kaufen"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "title": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Foto WK II Wehrmacht Soldaten Kirchen Ruine Bauernhaus OstfrontK1.58"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "__merchandising": {
+                                                        "group3Slots": [
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "Kostenloser Versand",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "Kostenloser Versand",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "Kostenloser Versand"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "Verkäufer 99.8% positiv",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "Verkäufer 99.8% positiv",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "Verkäufer 99.8% positiv"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_type": "ItemCard",
+                                                    "action": {
+                                                        "URL": "https://www.ebay.de/itm/294401797342?_trkparms=amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D4%26rkt%3D12%26sd%3D294948697337%26itm%3D294401797342%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault&_trksid=p2563228.c101121.m1986&amdata=cksum%3A294401797342eae51941cd5541eb825be9de61fd8d49%7Cenc%3AAQAGAAAA4LVNCBwdYa5B4%252FCpf4Qe2hec%252BSuAyGHmFctX8LjyB1Om2MKNMuWvQZx8FEykiSV2%252FRh%252BIu7B4SS%252BpwSZY%252BMGRx2hR%252FwLSpPphGGTXgXFQuAiXICLwpCNtIyHI%252FzvsyZ9KxB6v2RgOgoQDk89BymVM3TRDiVctGqxMzT8X978RRbRgBJICdgu6AeltYRAS5iIFefg0cK7DbcXdJ6XGcEiwd6lwKadN7gIjidOgHmHhvGzTGvWry3zoTBqfG7Gz0GQ8chpzOYe0dFHu9KlSiSPI9IapSz70j8O6Hr2w85Vgx0U%7Campid%3APL_CLK%7Cclp%3A2563228",
+                                                        "_type": "Action",
+                                                        "name": "VIEW_ITEM",
+                                                        "params": {
+                                                            "listingId": "294401797342"
+                                                        },
+                                                        "trackingList": [
+                                                            {
+                                                                "actionKind": "NAV",
+                                                                "eventProperty": {
+                                                                    "amdata": "amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D4%26rkt%3D12%26mehot%3Dpf%26sd%3D294948697337%26itm%3D294401797342%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault",
+                                                                    "ammiid": "eae51941cd5541eb825be9de61fd8d49",
+                                                                    "ampid": "PL_CLK",
+                                                                    "checksum": "294401797342eae51941cd5541eb825be9de61fd8d49",
+                                                                    "enc": "AQAGAAAA4LVNCBwdYa5B4/Cpf4Qe2hec+SuAyGHmFctX8LjyB1Om2MKNMuWvQZx8FEykiSV2/Rh+Iu7B4SS+pwSZY+MGRx2hR/wLSpPphGGTXgXFQuAiXICLwpCNtIyHI/zvsyZ9K6bK1kpzf0Ip5ApJOu4GdnDOfWTvJNqS+jdzRZ5Js3PT3nQDOCiPd0cPayrcAtTPISYGLqNy2e62ubgUo7JV+/20I3GjczOprQRG0uebV8qBRqXKbc4IjmVZom+q50VyTfgrZMvmrIL0C+oAuwJlWI/FHhPmyO+Bx0aWggkLWlC0",
+                                                                    "parentrq": "c61bcb7d2b9f4c72",
+                                                                    "sid": "p2047675.m1986.c20200818142238"
+                                                                },
+                                                                "flushImmediately": false,
+                                                                "operationId": "2047675"
+                                                            }
+                                                        ],
+                                                        "type": "NAV"
+                                                    },
+                                                    "displayPrice": {
+                                                        "_type": "TextualDisplayValue",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "EUR 34,90"
+                                                            }
+                                                        ],
+                                                        "value": {
+                                                            "currency": "EUR",
+                                                            "value": 34.9
+                                                        }
+                                                    },
+                                                    "id": "294401797342-NIL-NIL",
+                                                    "image": {
+                                                        "URL": "https://i.ebayimg.com/thumbs/images/g/y~gAAOSwZZBgpXDa/s-l200.jpg",
+                                                        "_type": "Image",
+                                                        "imageId": "y~gAAOSwZZBgpXDa",
+                                                        "imageIdType": "ZOOM_GUID",
+                                                        "originalSize": {
+                                                            "height": 1600,
+                                                            "width": 1088
+                                                        },
+                                                        "title": "Foto WK I Kirchen Ruine zerschossen B 1.68"
+                                                    },
+                                                    "listingId": "294401797342",
+                                                    "presentityId": "294401797342-NIL-NIL",
+                                                    "purchaseOptions": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Sofort-Kaufen"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "title": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Foto WK I Kirchen Ruine zerschossen B 1.68"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "__merchandising": {
+                                                        "group3Slots": [
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "+ EUR 3,00 Versand",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "+ EUR 3,00 Versand",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "+ EUR 3,00 Versand"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "Verkäufer 99.7% positiv",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "Verkäufer 99.7% positiv",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "Verkäufer 99.7% positiv"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_type": "ItemCard",
+                                                    "action": {
+                                                        "URL": "https://www.ebay.de/itm/294912589371?_trkparms=amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D5%26rkt%3D12%26sd%3D294948697337%26itm%3D294912589371%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault&_trksid=p2563228.c101121.m1986&amdata=cksum%3A294912589371eae51941cd5541eb825be9de61fd8d49%7Cenc%3AAQAGAAAA4LVNCBwdYa5B4%252FCpf4Qe2hcwbY2%252B5Gc4cinvj9P%252FW7BgTeRMsIWw2uSQkizvMV7OuPHCvAfTSNtXstrUlsGxMmfrawaLwrVtRhVj6Mr8z3LTSm3CfOxr7ZDt1phjXQfVsXfWWCFL%252FWE9LHCLV9shHIPBzOl4UV70vLhzVtKtyXwcJp4%252FAei1sVZwRRqkYu3gvmodviBw%252BN2VF9aATd%252FdRBiYg%252B23edQewZXMuM07xqUU9cAXKPx8wWArnsZEH6Ia8x198%252FV%252BNP2z64SZDAch4VAYyA2H2G%252Fh6nBytwNY9cYx%7Campid%3APL_CLK%7Cclp%3A2563228",
+                                                        "_type": "Action",
+                                                        "name": "VIEW_ITEM",
+                                                        "params": {
+                                                            "listingId": "294912589371"
+                                                        },
+                                                        "trackingList": [
+                                                            {
+                                                                "actionKind": "NAV",
+                                                                "eventProperty": {
+                                                                    "amdata": "amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D5%26rkt%3D12%26mehot%3Dpf%26sd%3D294948697337%26itm%3D294912589371%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault",
+                                                                    "ammiid": "eae51941cd5541eb825be9de61fd8d49",
+                                                                    "ampid": "PL_CLK",
+                                                                    "checksum": "294912589371eae51941cd5541eb825be9de61fd8d49",
+                                                                    "enc": "AQAGAAAA4LVNCBwdYa5B4/Cpf4Qe2hcwbY2+5Gc4cinvj9P/W7BgTeRMsIWw2uSQkizvMV7OuPHCvAfTSNtXstrUlsGxMmfrawaLwrVtRhVj6Mr8z3LTSm3CfOxr7ZDt1phjXQfVsSiM3X8TEAwG2VnBS+T9T+jPd2C62YLNGm8ZDMpnnmit+JNN6quy5sldJoKY4ef3yqJiKF2WjDwB+HOeJkW9iEm/BvqvVAOl79e14O9OZ6xkJJKnPTsxn8jG7f/vNfEpqRJneW3uVsxQCQYBZOkZSEIp6osw3vEpeFhbXfCAr68A",
+                                                                    "parentrq": "c61bcb7d2b9f4c72",
+                                                                    "sid": "p2047675.m1986.c20200818142238"
+                                                                },
+                                                                "flushImmediately": false,
+                                                                "operationId": "2047675"
+                                                            }
+                                                        ],
+                                                        "type": "NAV"
+                                                    },
+                                                    "displayPrice": {
+                                                        "_type": "TextualDisplayValue",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "EUR 34,90"
+                                                            }
+                                                        ],
+                                                        "value": {
+                                                            "currency": "EUR",
+                                                            "value": 34.9
+                                                        }
+                                                    },
+                                                    "id": "294912589371-NIL-NIL",
+                                                    "image": {
+                                                        "URL": "https://i.ebayimg.com/thumbs/images/g/zPYAAOSwuHtiUGYF/s-l200.jpg",
+                                                        "_type": "Image",
+                                                        "imageId": "zPYAAOSwuHtiUGYF",
+                                                        "imageIdType": "ZOOM_GUID",
+                                                        "originalSize": {
+                                                            "height": 1600,
+                                                            "width": 1091
+                                                        },
+                                                        "title": "Foto Altenkirchen auf Rügen Kirche a.d. 12. Jahrhundert J1.54"
+                                                    },
+                                                    "listingId": "294912589371",
+                                                    "presentityId": "294912589371-NIL-NIL",
+                                                    "purchaseOptions": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Sofort-Kaufen"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "title": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Foto Altenkirchen auf Rügen Kirche a.d. 12. Jahrhundert J1.54"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "__merchandising": {
+                                                        "group3Slots": [
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "+ EUR 3,00 Versand",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "+ EUR 3,00 Versand",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "+ EUR 3,00 Versand"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "Verkäufer 99.7% positiv",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "Verkäufer 99.7% positiv",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "Verkäufer 99.7% positiv"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_type": "ItemCard",
+                                                    "action": {
+                                                        "URL": "https://www.ebay.de/itm/294912590947?_trkparms=amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D6%26rkt%3D12%26sd%3D294948697337%26itm%3D294912590947%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault&_trksid=p2563228.c101121.m1986&amdata=cksum%3A294912590947eae51941cd5541eb825be9de61fd8d49%7Cenc%3AAQAGAAAA4LVNCBwdYa5B4%252FCpf4Qe2heqais7oyP1xCVMuBarJ06vs320rrCiIBWMORPGLOEqMKSaIXCEH9CNI0gwc1w6zrxLg7kaCgjLnW3tNYhQbL19K2BZkRalkX5eSDhzhFr81aGfwCu6PpUevVrvQB3aGFwnKyPNtOcbDJSJhOA%252FMal7MKF1fNQQnAS0vkRrp4Zl5dQAvJ1fkH2sCZAUbmaM3pjZYb9ZoN8X5BqLUvsBvvsLsDEuVK%252Btt0lx%252B8y%252FjEKbNvVCa2908qPQT7%252FBAWOHvwkR7rLJQcQcuYdId%252F9sAvVM%7Campid%3APL_CLK%7Cclp%3A2563228",
+                                                        "_type": "Action",
+                                                        "name": "VIEW_ITEM",
+                                                        "params": {
+                                                            "listingId": "294912590947"
+                                                        },
+                                                        "trackingList": [
+                                                            {
+                                                                "actionKind": "NAV",
+                                                                "eventProperty": {
+                                                                    "amdata": "amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D6%26rkt%3D12%26mehot%3Dpf%26sd%3D294948697337%26itm%3D294912590947%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault",
+                                                                    "ammiid": "eae51941cd5541eb825be9de61fd8d49",
+                                                                    "ampid": "PL_CLK",
+                                                                    "checksum": "294912590947eae51941cd5541eb825be9de61fd8d49",
+                                                                    "enc": "AQAGAAAA4LVNCBwdYa5B4/Cpf4Qe2heqais7oyP1xCVMuBarJ06vs320rrCiIBWMORPGLOEqMKSaIXCEH9CNI0gwc1w6zrxLg7kaCgjLnW3tNYhQbL19K2BZkRalkX5eSDhzhFr81QIkq/hurof6Y9bD9ep9NGfmvW0SWBo93drWAhL04CIcRl8tnd2tRGppgYUF4dRqXIUuz98ucQxLYTHPyeTdriR92ziZOx579Nqvrg3r7fUb3/w3VNtiUakW2F19PeL0BdLXe8r+Y4vyzT69neSrZhlWTqi9IRwy48Va3D/Ny6rq",
+                                                                    "parentrq": "c61bcb7d2b9f4c72",
+                                                                    "sid": "p2047675.m1986.c20200818142238"
+                                                                },
+                                                                "flushImmediately": false,
+                                                                "operationId": "2047675"
+                                                            }
+                                                        ],
+                                                        "type": "NAV"
+                                                    },
+                                                    "displayPrice": {
+                                                        "_type": "TextualDisplayValue",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "EUR 34,90"
+                                                            }
+                                                        ],
+                                                        "value": {
+                                                            "currency": "EUR",
+                                                            "value": 34.9
+                                                        }
+                                                    },
+                                                    "id": "294912590947-NIL-NIL",
+                                                    "image": {
+                                                        "URL": "https://i.ebayimg.com/thumbs/images/g/j6oAAOSwyfNiUGY~/s-l200.jpg",
+                                                        "_type": "Image",
+                                                        "imageId": "j6oAAOSwyfNiUGY~",
+                                                        "imageIdType": "ZOOM_GUID",
+                                                        "originalSize": {
+                                                            "height": 1067,
+                                                            "width": 1600
+                                                        },
+                                                        "title": "Foto  Altenkirchen auf Rügen Kirche a.d. 12. Jahrhundert Glockenflüge J1.54"
+                                                    },
+                                                    "listingId": "294912590947",
+                                                    "presentityId": "294912590947-NIL-NIL",
+                                                    "purchaseOptions": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Sofort-Kaufen"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "title": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Foto  Altenkirchen auf Rügen Kirche a.d. 12. Jahrhundert Glockenflüge J1.54"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "__merchandising": {
+                                                        "group3Slots": [
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "+ EUR 3,00 Versand",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "+ EUR 3,00 Versand",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "+ EUR 3,00 Versand"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "Verkäufer 99.7% positiv",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "Verkäufer 99.7% positiv",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "Verkäufer 99.7% positiv"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_type": "ItemCard",
+                                                    "action": {
+                                                        "URL": "https://www.ebay.de/itm/294912579106?_trkparms=amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D7%26rkt%3D12%26sd%3D294948697337%26itm%3D294912579106%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault&_trksid=p2563228.c101121.m1986&amdata=cksum%3A294912579106eae51941cd5541eb825be9de61fd8d49%7Cenc%3AAQAGAAAA4LVNCBwdYa5B4%252FCpf4Qe2hcgpGZhOzLVUkZTR5DoYgjCX5HF7IYvcJo0nNHFedHGtU5fvBAN83xruPun13Z37UOl6VjjbccAwG%252BAAXs1jcwBkkuijwWtwkz2b6m0hQEm0cxPHbG15arEFbEdO3bkZBUSeWbiG5CzE3c5EOyBLqb%252FX3K1bbCTXIBcvoRGeUkdO8wgQpntx%252BdknAFu%252FLeB2oxVUAt9clvuTGtFP1prCC6u6Ch8d4up3IB57WN7NuZzDH6wta817mtDIPKSVKHsAvVK9y1V7nDXtWsmqN%252FpAhdo%7Campid%3APL_CLK%7Cclp%3A2563228",
+                                                        "_type": "Action",
+                                                        "name": "VIEW_ITEM",
+                                                        "params": {
+                                                            "listingId": "294912579106"
+                                                        },
+                                                        "trackingList": [
+                                                            {
+                                                                "actionKind": "NAV",
+                                                                "eventProperty": {
+                                                                    "amdata": "amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D7%26rkt%3D12%26mehot%3Dpf%26sd%3D294948697337%26itm%3D294912579106%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault",
+                                                                    "ammiid": "eae51941cd5541eb825be9de61fd8d49",
+                                                                    "ampid": "PL_CLK",
+                                                                    "checksum": "294912579106eae51941cd5541eb825be9de61fd8d49",
+                                                                    "enc": "AQAGAAAA4LVNCBwdYa5B4/Cpf4Qe2hcgpGZhOzLVUkZTR5DoYgjCX5HF7IYvcJo0nNHFedHGtU5fvBAN83xruPun13Z37UOl6VjjbccAwG+AAXs1jcwBkkuijwWtwkz2b6m0hQEm0YdzcVR7lDkevqzTVyolEBIIrL3Owh3mXXlf8S16PaUj1PIhq5p0UI8HuQw6t3LyNpubpj5t3Fj+L+ezDlHNCnnu1ODrf6Qh/ZzzaMXUlOpYC/S5kfoUVFkbuaNmZ4eL+JKiKPxZKYqNLxKfMiMQrBV+Jl1YnGuKCtdLhZapztuh",
+                                                                    "parentrq": "c61bcb7d2b9f4c72",
+                                                                    "sid": "p2047675.m1986.c20200818142238"
+                                                                },
+                                                                "flushImmediately": false,
+                                                                "operationId": "2047675"
+                                                            }
+                                                        ],
+                                                        "type": "NAV"
+                                                    },
+                                                    "displayPrice": {
+                                                        "_type": "TextualDisplayValue",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "EUR 34,90"
+                                                            }
+                                                        ],
+                                                        "value": {
+                                                            "currency": "EUR",
+                                                            "value": 34.9
+                                                        }
+                                                    },
+                                                    "id": "294912579106-NIL-NIL",
+                                                    "image": {
+                                                        "URL": "https://i.ebayimg.com/thumbs/images/g/vQIAAOSw-NZiUGRf/s-l200.jpg",
+                                                        "_type": "Image",
+                                                        "imageId": "vQIAAOSw-NZiUGRf",
+                                                        "imageIdType": "ZOOM_GUID",
+                                                        "originalSize": {
+                                                            "height": 1600,
+                                                            "width": 1075
+                                                        },
+                                                        "title": "Foto Altenkirchen auf Rügen Götzenbild des Svantewit J1.54"
+                                                    },
+                                                    "listingId": "294912579106",
+                                                    "presentityId": "294912579106-NIL-NIL",
+                                                    "purchaseOptions": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Sofort-Kaufen"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "title": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Foto Altenkirchen auf Rügen Götzenbild des Svantewit J1.54"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "__merchandising": {
+                                                        "group3Slots": [
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "+ EUR 4,00 Versand",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "+ EUR 4,00 Versand",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "+ EUR 4,00 Versand"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "Verkäufer 99.7% positiv",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "Verkäufer 99.7% positiv",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "Verkäufer 99.7% positiv"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_type": "ItemCard",
+                                                    "action": {
+                                                        "URL": "https://www.ebay.de/itm/294603023909?_trkparms=amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D8%26rkt%3D12%26sd%3D294948697337%26itm%3D294603023909%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault&_trksid=p2563228.c101121.m1986&amdata=cksum%3A294603023909eae51941cd5541eb825be9de61fd8d49%7Cenc%3AAQAGAAAA4LVNCBwdYa5B4%252FCpf4Qe2heyMo5s%252B%252Fbsyi2YSsAvGmWl5RE%252BydMSY6HK0ZM5%252Fu%252BV29K%252Bl2uddTszqcZh%252FYrSjh%252FRUd%252FHHAUXFxcMcl7ZFJ7i8RbZM4OORdb%252B65KiTMNsJwzhg1P4h7gpHy%252BVdHBwQABEENwamWL3MLyJKP3x7okIG5Fy5PAI3gzNWxmm8IkVfhEqXX5oPeYXpJLld5VnDxcHtjcB37g%252FjYX8tXbvVAXqMs8djMFQXX3lXWWqSMnEux6XAtBhcQYVtuLi5tABiLpQc7Jf3xiVVQBq8q6u6I%252Fr%7Campid%3APL_CLK%7Cclp%3A2563228",
+                                                        "_type": "Action",
+                                                        "name": "VIEW_ITEM",
+                                                        "params": {
+                                                            "listingId": "294603023909"
+                                                        },
+                                                        "trackingList": [
+                                                            {
+                                                                "actionKind": "NAV",
+                                                                "eventProperty": {
+                                                                    "amdata": "amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D8%26rkt%3D12%26mehot%3Dpf%26sd%3D294948697337%26itm%3D294603023909%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault",
+                                                                    "ammiid": "eae51941cd5541eb825be9de61fd8d49",
+                                                                    "ampid": "PL_CLK",
+                                                                    "checksum": "294603023909eae51941cd5541eb825be9de61fd8d49",
+                                                                    "enc": "AQAGAAAA4LVNCBwdYa5B4/Cpf4Qe2heyMo5s+/bsyi2YSsAvGmWl5RE+ydMSY6HK0ZM5/u+V29K+l2uddTszqcZh/YrSjh/RUd/HHAUXFxcMcl7ZFJ7i8RbZM4OORdb+65KiTMNsJ7MiL52cG0aHqyy3wyrh9EwH9I078DS0Lcogg8rhhLj1t4cbaBX07B+Ow9UTKm9qnhmj77nQI8woSCllIFSg7HR2hFL6KuiLn0mfH3p5kxWuo4Rg657m4j0zFjwwRPp2MNnIqSpc913gtzNcdzN7Z9QbhoO1KFQe0oQX2eSVlSK6",
+                                                                    "parentrq": "c61bcb7d2b9f4c72",
+                                                                    "sid": "p2047675.m1986.c20200818142238"
+                                                                },
+                                                                "flushImmediately": false,
+                                                                "operationId": "2047675"
+                                                            }
+                                                        ],
+                                                        "type": "NAV"
+                                                    },
+                                                    "displayPrice": {
+                                                        "_type": "TextualDisplayValue",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "EUR 34,90"
+                                                            }
+                                                        ],
+                                                        "value": {
+                                                            "currency": "EUR",
+                                                            "value": 34.9
+                                                        }
+                                                    },
+                                                    "id": "294603023909-NIL-NIL",
+                                                    "image": {
+                                                        "URL": "https://i.ebayimg.com/thumbs/images/g/EewAAOSwK41hDAL8/s-l200.jpg",
+                                                        "_type": "Image",
+                                                        "imageId": "EewAAOSwK41hDAL8",
+                                                        "imageIdType": "ZOOM_GUID",
+                                                        "originalSize": {
+                                                            "height": 686,
+                                                            "width": 1055
+                                                        },
+                                                        "title": "Foto WKII Wehrmacht Soldaten Rast Neunkirchen Ostmark Austria F1.70"
+                                                    },
+                                                    "listingId": "294603023909",
+                                                    "presentityId": "294603023909-NIL-NIL",
+                                                    "purchaseOptions": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Sofort-Kaufen"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "title": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Foto WKII Wehrmacht Soldaten Rast Neunkirchen Ostmark Austria F1.70"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "__merchandising": {
+                                                        "group3Slots": [
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "+ EUR 4,50 Versand",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "+ EUR 4,50 Versand",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "+ EUR 4,50 Versand"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "Verkäufer 99.7% positiv",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "Verkäufer 99.7% positiv",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "Verkäufer 99.7% positiv"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_type": "ItemCard",
+                                                    "action": {
+                                                        "URL": "https://www.ebay.de/itm/294485244465?_trkparms=amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D9%26rkt%3D12%26sd%3D294948697337%26itm%3D294485244465%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault&_trksid=p2563228.c101121.m1986&amdata=cksum%3A294485244465eae51941cd5541eb825be9de61fd8d49%7Cenc%3AAQAGAAAA4LVNCBwdYa5B4%252FCpf4Qe2hcjD7PX0vU2Jruw7m2jSbQzszCaSSKeoPtaYGJZ%252FZTHcCjocWlq6J%252BWpJFdaiM%252BGyOM32Y18Vma%252FDlo4o%252B0q76YpuefvwpyCyHpiturYonGS70eSmz8kOTND5AVObTtkuALFDfEe8mPX3PqItzWarRngai9OR7d1mrtCI4rqItTBdT5Mp0OXozQoQ2ijRs80Y%252FJoi1wug188TPy83JMp3BehjQi98ZKIevSc2sfvHyfN5O3bcZJf6RL84CAD3ROydmOONDreVVWKnhPyvSb%252FHxa%7Campid%3APL_CLK%7Cclp%3A2563228",
+                                                        "_type": "Action",
+                                                        "name": "VIEW_ITEM",
+                                                        "params": {
+                                                            "listingId": "294485244465"
+                                                        },
+                                                        "trackingList": [
+                                                            {
+                                                                "actionKind": "NAV",
+                                                                "eventProperty": {
+                                                                    "amdata": "amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D9%26rkt%3D12%26mehot%3Dpf%26sd%3D294948697337%26itm%3D294485244465%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault",
+                                                                    "ammiid": "eae51941cd5541eb825be9de61fd8d49",
+                                                                    "ampid": "PL_CLK",
+                                                                    "checksum": "294485244465eae51941cd5541eb825be9de61fd8d49",
+                                                                    "enc": "AQAGAAAA4LVNCBwdYa5B4/Cpf4Qe2hcjD7PX0vU2Jruw7m2jSbQzszCaSSKeoPtaYGJZ/ZTHcCjocWlq6J+WpJFdaiM+GyOM32Y18Vma/Dlo4o+0q76YpuefvwpyCyHpiturYonGS7z/BPMklMoB2w+1oCop5aVz+CmFgz1VW4MGP0iZjG3IWtWf46DbUJEgDDzNRKVYbcUkKkW5is3kTEFhMobHRAoZuiwnKtmvk5klWvPymaQAb7RuhTsJamg+fQfyXsQKf02ltliLnB6+Xqvo7dQkAHbDDghCTdOfCUDbmaxBSP4z",
+                                                                    "parentrq": "c61bcb7d2b9f4c72",
+                                                                    "sid": "p2047675.m1986.c20200818142238"
+                                                                },
+                                                                "flushImmediately": false,
+                                                                "operationId": "2047675"
+                                                            }
+                                                        ],
+                                                        "type": "NAV"
+                                                    },
+                                                    "displayPrice": {
+                                                        "_type": "TextualDisplayValue",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "EUR 34,90"
+                                                            }
+                                                        ],
+                                                        "value": {
+                                                            "currency": "EUR",
+                                                            "value": 34.9
+                                                        }
+                                                    },
+                                                    "id": "294485244465-NIL-NIL",
+                                                    "image": {
+                                                        "URL": "https://i.ebayimg.com/thumbs/images/g/AUcAAOSwSLdhjmU0/s-l200.jpg",
+                                                        "_type": "Image",
+                                                        "imageId": "AUcAAOSwSLdhjmU0",
+                                                        "imageIdType": "ZOOM_GUID",
+                                                        "originalSize": {
+                                                            "height": 709,
+                                                            "width": 745
+                                                        },
+                                                        "title": "Foto WK I Straße Tracht Weißkirchen Bela Crkva Бела Црква Serbien Србија H1.30"
+                                                    },
+                                                    "listingId": "294485244465",
+                                                    "presentityId": "294485244465-NIL-NIL",
+                                                    "purchaseOptions": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Sofort-Kaufen"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "title": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Foto WK I Straße Tracht Weißkirchen Bela Crkva Бела Црква Serbien Србија H1.30"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "__merchandising": {
+                                                        "group3Slots": [
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "+ EUR 4,00 Versand",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "+ EUR 4,00 Versand",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "+ EUR 4,00 Versand"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "Verkäufer 99.7% positiv",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "Verkäufer 99.7% positiv",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "Verkäufer 99.7% positiv"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_type": "ItemCard",
+                                                    "action": {
+                                                        "URL": "https://www.ebay.de/itm/294493606988?_trkparms=amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D10%26rkt%3D12%26sd%3D294948697337%26itm%3D294493606988%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault&_trksid=p2563228.c101121.m1986&amdata=cksum%3A294493606988eae51941cd5541eb825be9de61fd8d49%7Cenc%3AAQAGAAAA4LVNCBwdYa5B4%252FCpf4Qe2hcvsPPYmOPzpi2SA7D12AyO8wnnS6h7bDvgCzBqH4H5H%252FBFifygb6IEmgVI4uWnqBn6P%252B14e9ON%252FWbOHD%252BGviWlgqgyCrs2aeLovYDMvfHWUDJal47JCGy5kvTptB7M4F5dil902qdOPHSKIU9UJBdoIADHfx7MpTVASjCRak470QspjqmyKEF2JnuIV1MxY1ZYgzNkkzUB7m4a5MdJYfu5QGMgqKXVs4YVIlczmwfSSjLHaPyL%252BCpS5%252BwtIL%252F8sUN8WrGbaUhCHnqqItWI4%252BtL%7Campid%3APL_CLK%7Cclp%3A2563228",
+                                                        "_type": "Action",
+                                                        "name": "VIEW_ITEM",
+                                                        "params": {
+                                                            "listingId": "294493606988"
+                                                        },
+                                                        "trackingList": [
+                                                            {
+                                                                "actionKind": "NAV",
+                                                                "eventProperty": {
+                                                                    "amdata": "amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D10%26rkt%3D12%26mehot%3Dpf%26sd%3D294948697337%26itm%3D294493606988%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault",
+                                                                    "ammiid": "eae51941cd5541eb825be9de61fd8d49",
+                                                                    "ampid": "PL_CLK",
+                                                                    "checksum": "294493606988eae51941cd5541eb825be9de61fd8d49",
+                                                                    "enc": "AQAGAAAA4LVNCBwdYa5B4/Cpf4Qe2hcvsPPYmOPzpi2SA7D12AyO8wnnS6h7bDvgCzBqH4H5H/BFifygb6IEmgVI4uWnqBn6P+14e9ON/WbOHD+GviWlgqgyCrs2aeLovYDMvfHWUNMUTxWs5ViIQljy0VNfYvw6Yq5AojTv0Ne24fI/gMYbdSjxX5DQjl28cFlx86Tws5ou/SphCd2yOW+74Z4QlTHkXJggnqexhDXa4rz4uvrXTZvkgnucYNbcvgo2LxA/S+n1tex1loRXOO0lsT5tl50J7UjP8WgOKgPUw0uxsbwT",
+                                                                    "parentrq": "c61bcb7d2b9f4c72",
+                                                                    "sid": "p2047675.m1986.c20200818142238"
+                                                                },
+                                                                "flushImmediately": false,
+                                                                "operationId": "2047675"
+                                                            }
+                                                        ],
+                                                        "type": "NAV"
+                                                    },
+                                                    "displayPrice": {
+                                                        "_type": "TextualDisplayValue",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "EUR 34,90"
+                                                            }
+                                                        ],
+                                                        "value": {
+                                                            "currency": "EUR",
+                                                            "value": 34.9
+                                                        }
+                                                    },
+                                                    "id": "294493606988-NIL-NIL",
+                                                    "image": {
+                                                        "URL": "https://i.ebayimg.com/thumbs/images/g/rXAAAOSwELVhjmkA/s-l200.jpg",
+                                                        "_type": "Image",
+                                                        "imageId": "rXAAAOSwELVhjmkA",
+                                                        "imageIdType": "ZOOM_GUID",
+                                                        "originalSize": {
+                                                            "height": 952,
+                                                            "width": 1428
+                                                        },
+                                                        "title": "Foto WK I Pioniere Weihnachten 1915 Weißkirchen Bela Crkva Бела Црква  H1.31"
+                                                    },
+                                                    "listingId": "294493606988",
+                                                    "presentityId": "294493606988-NIL-NIL",
+                                                    "purchaseOptions": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Sofort-Kaufen"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "title": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Foto WK I Pioniere Weihnachten 1915 Weißkirchen Bela Crkva Бела Црква  H1.31"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "__merchandising": {
+                                                        "group3Slots": [
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "+ EUR 4,50 Versand",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "+ EUR 4,50 Versand",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "+ EUR 4,50 Versand"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "Verkäufer 99.7% positiv",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "Verkäufer 99.7% positiv",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "Verkäufer 99.7% positiv"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_type": "ItemCard",
+                                                    "action": {
+                                                        "URL": "https://www.ebay.de/itm/294485098996?_trkparms=amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D11%26rkt%3D12%26sd%3D294948697337%26itm%3D294485098996%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault&_trksid=p2563228.c101121.m1986&amdata=cksum%3A294485098996eae51941cd5541eb825be9de61fd8d49%7Cenc%3AAQAGAAAA4LVNCBwdYa5B4%252FCpf4Qe2hc4PhO5NtSD50DKbTYjf9SBSBNFGL34AAsmdB2luvPrXBmvtot23xQZyXbuKUQrQZmeUlOK9lMZvBU7ve0ZfvIt256CMXZ0%252BDfG20p4%252ByFYAEg4EjOCJotMMTtLABYBlvcrZVl7P5gAbgq8MNwPU6xw8TZxY1Fbv1XYEq5Tdqhc9dxPDUbOpjxkAbb%252BzNkMgqluAJy49LU5eeMeZapCo%252B1uchuAFsoHLG5x5HY%252Bs5%252F9K42sP9YWRM5Ha%252FevxpW7%252FyaE0%252BYce8%252FtA39h4N5Ie%252Bh3%7Campid%3APL_CLK%7Cclp%3A2563228",
+                                                        "_type": "Action",
+                                                        "name": "VIEW_ITEM",
+                                                        "params": {
+                                                            "listingId": "294485098996"
+                                                        },
+                                                        "trackingList": [
+                                                            {
+                                                                "actionKind": "NAV",
+                                                                "eventProperty": {
+                                                                    "amdata": "amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D11%26rkt%3D12%26mehot%3Dpf%26sd%3D294948697337%26itm%3D294485098996%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault",
+                                                                    "ammiid": "eae51941cd5541eb825be9de61fd8d49",
+                                                                    "ampid": "PL_CLK",
+                                                                    "checksum": "294485098996eae51941cd5541eb825be9de61fd8d49",
+                                                                    "enc": "AQAGAAAA4LVNCBwdYa5B4/Cpf4Qe2hc4PhO5NtSD50DKbTYjf9SBSBNFGL34AAsmdB2luvPrXBmvtot23xQZyXbuKUQrQZmeUlOK9lMZvBU7ve0ZfvIt256CMXZ0+DfG20p4+yFYABNWvx4zHtEEKdUMZt8atEzJ1yAUEkimojYcORHtgpBq6CosK7bvPIHjCoX0MDvbO7wxY556jbxwSpcQTPK/ZRFfDQxZOuIdgGkrNaBoWPfnlU6MCtlKH+1uj+Yr5k+YDMQ8vRuBmhUNUFFpcPqUrb+CQSMokuY3WwErc4I1aDwH",
+                                                                    "parentrq": "c61bcb7d2b9f4c72",
+                                                                    "sid": "p2047675.m1986.c20200818142238"
+                                                                },
+                                                                "flushImmediately": false,
+                                                                "operationId": "2047675"
+                                                            }
+                                                        ],
+                                                        "type": "NAV"
+                                                    },
+                                                    "displayPrice": {
+                                                        "_type": "TextualDisplayValue",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "EUR 34,90"
+                                                            }
+                                                        ],
+                                                        "value": {
+                                                            "currency": "EUR",
+                                                            "value": 34.9
+                                                        }
+                                                    },
+                                                    "id": "294485098996-NIL-NIL",
+                                                    "image": {
+                                                        "URL": "https://i.ebayimg.com/thumbs/images/g/V0MAAOSwvwJhjl9x/s-l200.jpg",
+                                                        "_type": "Image",
+                                                        "imageId": "V0MAAOSwvwJhjl9x",
+                                                        "imageIdType": "ZOOM_GUID",
+                                                        "originalSize": {
+                                                            "height": 697,
+                                                            "width": 748
+                                                        },
+                                                        "title": "Foto WKI Zigeunerdorf bei Weißkirchen Bela Crkva Бела Црква Serbien Србија H1.30"
+                                                    },
+                                                    "listingId": "294485098996",
+                                                    "presentityId": "294485098996-NIL-NIL",
+                                                    "purchaseOptions": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Sofort-Kaufen"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "title": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Foto WKI Zigeunerdorf bei Weißkirchen Bela Crkva Бела Црква Serbien Србија H1.30"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "__merchandising": {
+                                                        "group3Slots": [
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "+ EUR 4,00 Versand",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "+ EUR 4,00 Versand",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "+ EUR 4,00 Versand"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "_type": "TextualDisplay",
+                                                                "accessibilityText": "Verkäufer 99.7% positiv",
+                                                                "textSpans": [
+                                                                    {
+                                                                        "_type": "TextSpan",
+                                                                        "accessibilityText": "Verkäufer 99.7% positiv",
+                                                                        "styles": [
+                                                                            "SECONDARY"
+                                                                        ],
+                                                                        "text": "Verkäufer 99.7% positiv"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_type": "ItemCard",
+                                                    "action": {
+                                                        "URL": "https://www.ebay.de/itm/294602404207?_trkparms=amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D12%26rkt%3D12%26sd%3D294948697337%26itm%3D294602404207%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault&_trksid=p2563228.c101121.m1986&amdata=cksum%3A294602404207eae51941cd5541eb825be9de61fd8d49%7Cenc%3AAQAGAAAA4LVNCBwdYa5B4%252FCpf4Qe2hdToOQ3fsWmZavBrmNYrGuPxRrEK6kHGHzCcaqlWNPbMgi3t5NcNWf%252FkcXuZHAAqMWtXhWqVlKPinUQX8LNNos8Z8zTkAAgCXwsqAxIxhwvxzlOcLfknkYY01is3w7RgEwtMvXn1ofxViN3FNgrxGxz%252Bsq9L%252F9XDCbAG3LQYi2x%252FQYrNUmHWq9%252BbvTL8rXi1JhYT%252BRzJfQrOGkhguywJxFpCPCEAEZuhHcbJhe5D7gZ6%252FKYTBOmzDYJUWdKTxpgADxXjEXZ2XVXwYDcowuUJ20B%7Campid%3APL_CLK%7Cclp%3A2563228",
+                                                        "_type": "Action",
+                                                        "name": "VIEW_ITEM",
+                                                        "params": {
+                                                            "listingId": "294602404207"
+                                                        },
+                                                        "trackingList": [
+                                                            {
+                                                                "actionKind": "NAV",
+                                                                "eventProperty": {
+                                                                    "amdata": "amclksrc%3DITM%26aid%3D1110018%26algo%3DHOMESPLICE.COMPLISTINGS%26ao%3D1%26asc%3D20200818142238%26meid%3Deae51941cd5541eb825be9de61fd8d49%26pid%3D101121%26rk%3D12%26rkt%3D12%26mehot%3Dpf%26sd%3D294948697337%26itm%3D294602404207%26pmt%3D1%26noa%3D0%26pg%3D2563228%26algv%3Ddefault",
+                                                                    "ammiid": "eae51941cd5541eb825be9de61fd8d49",
+                                                                    "ampid": "PL_CLK",
+                                                                    "checksum": "294602404207eae51941cd5541eb825be9de61fd8d49",
+                                                                    "enc": "AQAGAAAA4LVNCBwdYa5B4/Cpf4Qe2hdToOQ3fsWmZavBrmNYrGuPxRrEK6kHGHzCcaqlWNPbMgi3t5NcNWf/kcXuZHAAqMWtXhWqVlKPinUQX8LNNos8Z8zTkAAgCXwsqAxIxhwvx6p1oofxMw1uv3cTofhGdxz6/szw4fdsBKVtstbQs27HT9xmgbWr6WCfpveJ/UaZmFz22OfFryJ8JcmJcPvpguEpMTmLHFBs8Pm6oUzH4AMd5deq91//D+sfX3eWno/IoFiR65SNbuAW2BB1A2PXxf6Ch0mCQFOJQqjroivlHMsK",
+                                                                    "parentrq": "c61bcb7d2b9f4c72",
+                                                                    "sid": "p2047675.m1986.c20200818142238"
+                                                                },
+                                                                "flushImmediately": false,
+                                                                "operationId": "2047675"
+                                                            }
+                                                        ],
+                                                        "type": "NAV"
+                                                    },
+                                                    "displayPrice": {
+                                                        "_type": "TextualDisplayValue",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "EUR 29,90"
+                                                            }
+                                                        ],
+                                                        "value": {
+                                                            "currency": "EUR",
+                                                            "value": 29.9
+                                                        }
+                                                    },
+                                                    "id": "294602404207-NIL-NIL",
+                                                    "image": {
+                                                        "URL": "https://i.ebayimg.com/thumbs/images/g/OpMAAOSw5g5hC~4a/s-l200.jpg",
+                                                        "_type": "Image",
+                                                        "imageId": "OpMAAOSw5g5hC~4a",
+                                                        "imageIdType": "ZOOM_GUID",
+                                                        "originalSize": {
+                                                            "height": 1600,
+                                                            "width": 1007
+                                                        },
+                                                        "title": "Foto WK I unversehrtes Kirchenfenster E1.76"
+                                                    },
+                                                    "listingId": "294602404207",
+                                                    "presentityId": "294602404207-NIL-NIL",
+                                                    "purchaseOptions": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Sofort-Kaufen"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "title": {
+                                                        "_type": "TextualDisplay",
+                                                        "textSpans": [
+                                                            {
+                                                                "_type": "TextSpan",
+                                                                "text": "Foto WK I unversehrtes Kirchenfenster E1.76"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ],
+                                            "controls": {
+                                                "carousel": {
+                                                    "_type": "CarouselControls",
+                                                    "next": {
+                                                        "_type": "Action",
+                                                        "accessibilityText": "Zur nächsten Folie, Weitere passende Anzeigen",
+                                                        "name": "VIEW_MERCH",
+                                                        "trackingList": [],
+                                                        "type": "OPERATION"
+                                                    },
+                                                    "previous": {
+                                                        "_type": "Action",
+                                                        "accessibilityText": "Zur vorherigen Folie, Weitere passende Anzeigen",
+                                                        "name": "VIEW_MERCH",
+                                                        "trackingList": [],
+                                                        "type": "OPERATION"
+                                                    }
+                                                },
+                                                "slider": {
+                                                    "_type": "SliderControls",
+                                                    "action": {
+                                                        "_type": "Action",
+                                                        "name": "VIEW_MERCH",
+                                                        "trackingList": [],
+                                                        "type": "OPERATION"
+                                                    }
+                                                }
+                                            },
+                                            "title": {
+                                                "_type": "TextualDisplay",
+                                                "textSpans": [
+                                                    {
+                                                        "_type": "TextSpan",
+                                                        "text": "Weitere passende Anzeigen"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "contentMeta": {
+                                "alternatePrice": {
+                                    "_type": "TextualDisplay",
+                                    "accessibilityText": "Angebot ansehen",
+                                    "textSpans": [
+                                        {
+                                            "_type": "TextSpan",
+                                            "accessibilityText": "Angebot ansehen",
+                                            "text": "Angebot ansehen"
+                                        }
+                                    ]
+                                },
+                                "cardSize": "MEDIUM_CARDS",
+                                "cardSizeCounts": {
+                                    "button1Slots": 0,
+                                    "displayPrice": 1,
+                                    "eekIcons": 0,
+                                    "group1Slots": 0,
+                                    "group2Slots": 0,
+                                    "group3Slots": 2,
+                                    "group4Slots": 0,
+                                    "priceQualifier": 0,
+                                    "title": 2
+                                },
+                                "placementId": 101121
+                            },
+                            "meta": {
+                                "name": "lex6aspects",
+                                "trackingList": [
+                                    {
+                                        "eventAction": "VIEW",
+                                        "eventFamily": "ADV",
+                                        "eventProperty": {
+                                            "adctrl": "AD_MDL_VIEW",
+                                            "adctrldata": "ao%253D1%2526asc%253D20200818142238%2526meid%253Deae51941cd5541eb825be9de61fd8d49%2526pid%253D101121%2526pg%253D2563228%2526algv%253Ddefault%2526cs%253D%2526va%253D",
+                                            "meid": "eae51941cd5541eb825be9de61fd8d49",
+                                            "moduledtl": "mi:1986|c:20200818142238",
+                                            "parentrq": "c61bcb7d2b9f4c72",
+                                            "pltid": "101121"
+                                        },
+                                        "flushImmediately": false,
+                                        "operationId": "2047675"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "placementId": "101121"
+                }
+            },
+            {
+                "f": 1
+            }
+        ]
+    ]
+}
