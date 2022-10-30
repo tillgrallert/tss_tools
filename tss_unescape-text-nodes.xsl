@@ -8,7 +8,9 @@
     xmlns:bach="http://www.sitzextase.de/ns"
     xmlns="http://www.thirdstreetsoftware.com/SenteXML-1.0"
     exclude-result-prefixes="xs"
-    version="2.0"> 
+    version="3.0"> 
+    
+    <xsl:param name="p_debug" select="true()"/>
     
     <!-- identity transform-->
     <xsl:template match="node() | @*">
@@ -42,49 +44,58 @@
     </xsl:template>
     
     <xsl:template match="text()" mode="m_preprocessing">
-        <xsl:value-of select="bach:funcStringCorrectSenteEscaping(.)" disable-output-escaping="no"/>
+        <xsl:value-of select="bach:string-correct-escaping(.)" disable-output-escaping="no"/>
     </xsl:template>
     
     <!-- preprocess function -->
-    <xsl:function name="bach:funcStringCorrectSenteEscaping">
-        <xsl:param name="p_input"/>
+    <xsl:function name="bach:string-correct-escaping">
+        <xsl:param name="p_input" as="xs:string"/>
+        <xsl:if test="$p_debug = true()">
+            <xsl:message>
+                <xsl:text>Running `bach:string-correct-escapting()` on </xsl:text><xsl:value-of select="$p_input"/>
+            </xsl:message>
+        </xsl:if>
         <xsl:choose>
             <!-- strip-out potentially erroneous <add> tags (at some point Sente failed to recognise the opening tag <add> but accepted the closing </add>) -->
             <xsl:when test="contains($p_input,'&amp;lt;/add&amp;gt;')">
-                <xsl:value-of  select="bach:funcStringCorrectSenteEscaping(replace($p_input,'&amp;lt;/add&amp;gt;',' '))"/>
+                <xsl:value-of  select="bach:string-correct-escaping(replace($p_input,'&amp;lt;/add&amp;gt;',' '))"/>
             </xsl:when>
             <xsl:when test="contains($p_input,'&amp;lt;add&amp;gt;')">
-                <xsl:value-of  select="bach:funcStringCorrectSenteEscaping(replace($p_input,'&amp;lt;add&amp;gt;',' '))"/>
+                <xsl:value-of  select="bach:string-correct-escaping(replace($p_input,'&amp;lt;add&amp;gt;',' '))"/>
             </xsl:when>
             <!-- correct smart quotes -->
             <xsl:when test="contains($p_input,'“')">
-                <xsl:value-of select="bach:funcStringCorrectSenteEscaping(replace($p_input,'“','&quot;'))"/>
+                <xsl:value-of select="bach:string-correct-escaping(replace($p_input,'“','&quot;'))"/>
             </xsl:when>
             <xsl:when test="contains($p_input,'”')">
-                <xsl:value-of select="bach:funcStringCorrectSenteEscaping(replace($p_input,'”','&quot;'))"/>
+                <xsl:value-of select="bach:string-correct-escaping(replace($p_input,'”','&quot;'))"/>
             </xsl:when>
             <!-- correct quotes -->
             <!--<xsl:when test="contains($p_input,'''')">
-                <xsl:value-of select="bach:funcStringCorrectSenteEscaping(replace($p_input,'''','&quot;'))"/>
+                <xsl:value-of select="bach:string-correct-escaping(replace($p_input,'''','&quot;'))"/>
             </xsl:when>-->
             <!-- correct Sente's unclosed <br> tags -->
             <xsl:when test="contains($p_input,'&lt;br&gt;')">
-                <xsl:value-of select="bach:funcStringCorrectSenteEscaping(replace($p_input,'&lt;br&gt;','&lt;br/&gt;'))"/>
+                <xsl:value-of select="bach:string-correct-escaping(replace($p_input,'&lt;br&gt;','&lt;br/&gt;'))"/>
             </xsl:when>
             <!-- correct my faulty encoding of unclosed <pb> tags -->
             <xsl:when test="contains($p_input,'&lt;pb&gt;')">
-                <xsl:value-of select="bach:funcStringCorrectSenteEscaping(replace($p_input,'&lt;pb&gt;','&lt;pb/&gt;'))"/>
+                <xsl:value-of select="bach:string-correct-escaping(replace($p_input,'&lt;pb&gt;','&lt;pb/&gt;'))"/>
             </xsl:when>
             <!-- correct angled brackets -->
             <xsl:when test="contains($p_input,'&amp;lt;')">
-                <xsl:value-of select="bach:funcStringCorrectSenteEscaping(replace($p_input,'&amp;lt;','&lt;'))"/>
+                <xsl:value-of select="bach:string-correct-escaping(replace($p_input,'&amp;lt;','&lt;'))"/>
             </xsl:when>
             <xsl:when test="contains($p_input,'&amp;gt;')">
-                <xsl:value-of  select="bach:funcStringCorrectSenteEscaping(replace($p_input,'&amp;gt;','&gt;'))"/>
+                <xsl:value-of  select="bach:string-correct-escaping(replace($p_input,'&amp;gt;','&gt;'))"/>
             </xsl:when>
             <!-- correct double ampersands -->
             <xsl:when test="contains($p_input,'&amp;amp;')">
-                <xsl:value-of  select="bach:funcStringCorrectSenteEscaping(replace($p_input,'&amp;amp;','&amp;'))"/>
+                <xsl:value-of  select="bach:string-correct-escaping(replace($p_input,'&amp;amp;','&amp;'))"/>
+            </xsl:when>
+            <!-- correct quotation marks -->
+            <xsl:when test="contains($p_input,'&amp;quot;')">
+                <xsl:value-of  select="bach:string-correct-escaping(replace($p_input,'&amp;quot;','&quot;'))"/>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:copy-of select="$p_input"/>
@@ -130,7 +141,12 @@
     </xsl:variable>
     
     <xsl:template name="t_unescape">
-        <xsl:param name="p_input"/>
+        <xsl:param name="p_input" as="xs:string"/>
+        <xsl:if test="$p_debug = true()">
+            <xsl:message>
+                <xsl:text>Running `bach:string-unescape()` on </xsl:text><xsl:value-of select="$p_input"/>
+            </xsl:message>
+        </xsl:if>
         <!-- plan: tokenize at < -->
         <xsl:for-each select="tokenize($p_input,'&lt;')">
             <xsl:variable name="v_string-self" select="."/>
@@ -157,12 +173,27 @@
                 <!-- the tag will always be at the beginning of the string -->
                 <xsl:when test="$v_tag-name!=''">
                     <xsl:variable name="v_tag" select="concat('&lt;',$v_tag-full,'&gt;')"/>
+                    <xsl:if test="$p_debug = true()">
+                        <xsl:message>
+                            <xsl:text>Found tag "</xsl:text><xsl:value-of select="$v_tag-full"/><xsl:text>"</xsl:text>
+                        </xsl:message>
+                    </xsl:if>
                     <!-- check if tag is allowed -->
                     <xsl:choose>
                         <xsl:when test="$v_allowed-tags/*[local-name()=$v_tag-name]">
+                            <xsl:if test="$p_debug = true()">
+                                <xsl:message>
+                                    <xsl:text>This tag will be unescaped</xsl:text>
+                                </xsl:message>
+                            </xsl:if>
                             <xsl:value-of select="$v_tag" disable-output-escaping="yes"/>
                         </xsl:when>
                         <xsl:otherwise>
+                            <xsl:if test="$p_debug = true()">
+                                <xsl:message>
+                                    <xsl:text>This tag will will remain escaped</xsl:text>
+                                </xsl:message>
+                            </xsl:if>
                             <xsl:value-of select="$v_tag" disable-output-escaping="no"/>
                         </xsl:otherwise>
                     </xsl:choose>
