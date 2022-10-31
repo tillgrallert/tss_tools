@@ -13,6 +13,7 @@
     <!-- it also fixes purely numerical article titles for periodicals -->
     <!-- to do: write all additional information helping to locate stuff in archives to the call-num -->
     
+    <xsl:param name="p_debug" select="true()"/>
     
     <!-- identify transform -->
     <xsl:template match="@* | node()">
@@ -68,6 +69,7 @@
     </xsl:template>
     
     <xsl:template match="tss:reference[contains(tss:publicationType/@name, 'Archival')]">
+        <xsl:variable name="v_id-self" select="@xml:id"/>
         <xsl:variable name="v_type" select="tss:publicationType/@name"/>
         <xsl:variable name="v_date" select="descendant::tss:date[@type = 'Publication']"/>
         <xsl:variable name="v_year">
@@ -84,16 +86,27 @@
             <xsl:copy select="tss:characteristics">
                 <xsl:apply-templates/>
                 <!-- add a new article title for diary/ journal entries -->
-                <xsl:if test="not(descendant::tss:characteristic[@name = 'articleTitle']) and contains($v_type, 'Entry')">
+                <xsl:if test="$p_debug = true()">
+                    <xsl:message>
+                        <xsl:text>Test if this archival source is a journal entry: </xsl:text><xsl:value-of select="$v_id-self"/>
+                    </xsl:message>
+                </xsl:if>
+                <xsl:if test="not(tss:characteristics/tss:characteristic[@name = 'articleTitle']) and contains($v_type, 'Entry')">
                     <!--<xsl:message terminate="no">
                         <xsl:value-of select="tss:publicationType/@name"/>
                         <xsl:value-of select="$v_type"/>
                     </xsl:message>-->
                     <xsl:variable name="v_date-of-entry">
                         <xsl:choose>
-                            <xsl:when test="$v_date[@year][@month][@day]">
+                            <xsl:when test="$v_date[@year != ''][@month != ''][@day != '']">
                                 <xsl:value-of select="concat( format-number($v_date/@year, '0000'), '-', format-number($v_date/@month, '00'), '-', format-number($v_date/@day, '00'))"/>
                             </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:message terminate="no">
+                                    <xsl:value-of select="$v_id-self"/>
+                                    <xsl:text> has no machine-actionable publication date</xsl:text>
+                                </xsl:message>
+                            </xsl:otherwise>
                         </xsl:choose>
                     </xsl:variable>
                     <xsl:element name="tss:characteristic">
@@ -190,4 +203,18 @@
         </xsl:copy>
     </xsl:template>
     
+    <!-- fix URLs -->
+    <xsl:template match="tss:characteristic[@name='URL']">
+        <xsl:copy>
+            <xsl:apply-templates select="@*"/>
+            <xsl:choose>
+                <xsl:when test="matches(., 'delcampe.net', 'i')">
+                    <xsl:value-of select="concat('https://www.delcampe.net/en_GB/collectables/item/', parent::tss:characteristics/tss:characteristic[@name = 'call-num'], '.html')"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:apply-templates/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:copy>
+    </xsl:template>
 </xsl:stylesheet>
